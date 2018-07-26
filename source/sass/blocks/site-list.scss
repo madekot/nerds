@@ -1,0 +1,8 @@
+.site-list {
+  @include font-main-medium;
+  @include reset-list;
+
+  font-size: 16px;
+  line-height: 1.875;
+  text-transform: uppercase;
+}

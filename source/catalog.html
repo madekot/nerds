@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Сайт интернет магазина "nerds":Каталог</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="page-header__main-nav main-nav">
+        <a href="#" class="main-nav__logo logo">
+          <img src="#" alt="Логотип Нёрдс" class="logo__image logo__image--theme-normal">
+        </a>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="#" class="site-list__link">Студия</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#" class="site-list__link">Клиенты</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#" class="site-list__link site-list__link--current">Магазин</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#" class="site-list__link">Контакты</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a href="#" class="user-list__link">Корзина</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main page-main__wrapper">
+      <div class="page-main__wrapper page-main__wrapper--gray">
+        <h1 class="page-main__title page-main__inner">
+          Магазин готовых шаблонов</h1>
+      </div>
+      <div class="container-flex page-main__inner">
+        <section class="page-main__filter">
+          <form action="" method="get" class="filter page-main__form">
+            <div class="filter__range filter-range">
+              <h2 class="filter-range__title">Cтоимость:</h2>
+              <div class="filter-range__range-controls">
+                <div class="filter-range__scale"></div>
+                <div class="filter-range__togle filter-range__togle--min"></div>
+                <div class="filter-range__togle filter-range__togle--max"></div>
+              </div>
+              <div class="filter-range__price-controls">
+                <p class="filter-renge__wrapper">
+                  <label for="min-price" class="filter-range__price-text">От</label>
+                  <input
+                    type="text"
+                    name="min-price"
+                    value="0"
+                    class="filter-range__price-value"
+                    id="min-price">
+                </p>
+                <p class="filter-renge__wrapper">
+                  <label for="max-price" class="filter-range__price-text">До</label>
+                  <input
+                    type="text"
+                    name="max-price"
+                    value="15 000"
+                    class="filter-range__price-value"
+                    id="max-price">
+                </p>
+              </div>
+            </div>
+            <div class="filter__radio-filter">
+              <h2 class="filter__title">Сетка:</h2>
+              <p class="container filter__container">
+                <label for="adaptive" class="filter__text">Адаптивная</label>
+                <input
+                  type="radio"
+                  name="grid"
+                  class="filter__input-radio"
+                  checked="checked"
+                  id="adaptive"></p>
+              <p class="container filter__container">
+                <label for="fixed" class="filter__text">Фиксированная</label>
+                <input type="radio" name="grid" class="filter__input-radio" id="fixed"></p>
+              <p class="container filter__container">
+                <label for="rubber" class="filter__text">Резиновая</label>
+                <input type="radio" name="grid" class="filter__input-radio" id="rubber"></p>
+            </div>
+            <div class="filter__checkbox-filter">
+              <h2 class="filter__title">Особенности:</h2>
+              <p class="filter__container">
+                <label for="slider" class="filter__text">Слайдер</label>
+                <input type="checkbox" name="#" checked="checked" id="slider"></p>
+              <p class="filter__container">
+                <label for="feature" class="filter__text">Блок преимуществ</label>
+                <input type="checkbox" name="#" id="feature"></p>
+              <p class="filter__container">
+                <label for="news" class="filter__text">Новости</label>
+                <input type="checkbox" name="#" checked="checked" id="news"></p>
+              <p class="filter__container">
+                <label for="gallery" class="filter__text">Галерея</label>
+                <input type="checkbox" name="#" id="gallery"></p>
+              <p class="filter__container">
+                <label for="basket" class="filter__text">Корзина</label>
+                <input type="checkbox" name="#" id="basket"></p>
+            </div>
+            <button class="form__button button button--theme-gray">Показать</button>
+          </form>
+        </section>
+        <div class="page-main__products">
+          <section class="page-main__sorting sorting">
+            <h2 class="sorting__title">Сортировать:</h2>
+            <form action="" method="get" class="sorting__list-type">
+              <p class="sorting__item">
+                <label for="price" class="sorting__text">По цене</label>
+                <input
+                  type="radio"
+                  name="type"
+                  class="sorting__input"
+                  checked="checked"
+                  id="price"></p>
+              <p class="sorting__item">
+                <label for="type" class="sorting__text">По типу</label>
+                <input type="radio" name="type" class="sorting__input" id="type"></p>
+              <p class="sorting__item">
+                <label for="name" class="sorting__text">По названию</label>
+                <input type="radio" name="type" class="sorting__input" id="name"></p>
+            </form>
+            <form action="" method="get" class="sorting__list-value">
+              <p class="sorting__item">
+                <label for="" class="sorting__text">
+                  <span class="visually-hidden">По увеличению</span></label>
+                <input type="radio" class="sorting__input" checked="checked" name="value"></p>
+              <p class="sorting__item">
+                <label for="" class="sorting__text">
+                  <span class="visually-hidden">По уменьшению</span></label>
+                <input type="radio" class="sorting__input" name="value"></p>
+            </form>
+          </section>
+          <section class="page-main__templates templates">
+            <h2 class="visually-hidden">Результаты поиска:</h2>
+            <ul class="templates__templates-list">
+              <li class="templates__item"><img
+                src=""
+                alt="Седона"
+                class="templates__image templates__image--sedona"
+                width="360"
+                height="576"></li>
+              <li class="templates__item"><img
+                src=""
+                alt="Пинк"
+                class="templates__image templates__image--pink"
+                width="360"
+                height="576"></li>
+              <li class="templates__item"><img
+                src=""
+                alt="Барбершоп"
+                class="templates__image templates__image--barbershop"
+                width="360"
+                height="576"></li>
+              <li class="templates__item"><img
+                src=""
+                alt="Мишка"
+                class="templates__image templates__image--mishka"
+                width="360"
+                height="576"></li>
+              <li class="templates__item"><img
+                src=""
+                alt="Альпус"
+                class="templates__image templates__image--aplus"
+                width="360"
+                height="576"></li>
+              <li class="templates__item"><img
+                src=""
+                alt="Кваст"
+                class="templates__image templates__image--kvast"
+                width="360"
+                height="576"></li>
+            </ul>
+            <div class="templates__pagination">
+              <a
+                href="#"
+                class="templates__button templates__button--current button button--gray button--tiny">1</a>
+              <a href="#" class="templates__button button button--gray button--tiny">2</a>
+              <a href="#" class="templates__button button button--gray button--tiny">3</a>
+              <a href="#" class="templates__button button button--gray">Следующая</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
