@@ -1,0 +1,22 @@
+.button {
+  font-weight: $font-weight-medium;
+  font-size: 16px;
+  line-height: 1.125;
+  font-family: $font-family-main;
+  color: $color-white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0;
+
+  background-color: $color-red;
+  border: none;
+  border-radius: 3px;
+
+  &--green {
+    background-color: $color-green;
+  }
+
+  &--yellow {
+    background-color: $color-yellow;
+  }
+}

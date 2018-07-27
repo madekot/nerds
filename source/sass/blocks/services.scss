@@ -1,0 +1,16 @@
+.services__list {
+  @include reset-list;
+}
+
+.services__title {
+  font-weight: $font-weight-bold;
+  font-size: 24px;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.services__text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: $color-dark-blue;
+}

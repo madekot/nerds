@@ -1,0 +1,14 @@
+.social__list {
+  @include reset-list;
+}
+
+.social__slogan {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: $font-weight-bold;
+}
+
+.social__text {
+  color: $color-gray-darken;
+  line-height: 1.375;
+}

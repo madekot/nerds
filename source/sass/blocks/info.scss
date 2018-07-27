@@ -1,0 +1,34 @@
+.info__slogan {
+  font-size: 45px;
+  line-height: 1;
+  font-weight: $font-weight-bold;
+}
+
+.info__description {
+  color:$color-dark-blue;
+}
+
+.info__title {
+  font-size: inherit;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+}
+
+.info__list-development {
+  @include reset-list;
+}
+
+.info__item {
+  color: $color-dark-blue;
+}
+
+.info-table__value {
+  font-size: 45px;
+  line-height: 0.223;
+  font-weight: $font-weight-bold;
+}
+
+.info-table__field {
+  line-height: 1.125;
+  color: $color-dark-blue;
+}

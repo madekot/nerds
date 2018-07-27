@@ -1,0 +1,21 @@
+.modal {
+  line-height: 1.125;
+}
+
+.modal__title {
+  font-weight: $font-weight-medium;
+  font-size: 45px;
+  line-height: 1;
+}
+
+.modal-form__text {
+  font-weight: $font-weight-bold;
+}
+
+.modal-form__input {
+  font: inherit;
+
+  &::placeholder {
+    color: $color-gray-darken;
+  }
+}

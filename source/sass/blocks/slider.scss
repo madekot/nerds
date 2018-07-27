@@ -1,0 +1,14 @@
+.slider__list {
+  @include reset-list;
+  background-color: $color-gray;
+}
+
+.slider__lead {
+  font-weight: $font-weight-medium;
+  font-size: 55px;
+  line-height: 1;
+}
+
+.slider__text {
+  color: $color-dark-blue
+}
