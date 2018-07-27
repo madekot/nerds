@@ -19,4 +19,9 @@
   &--yellow {
     background-color: $color-yellow;
   }
+
+  &--gray {
+    background-color: $color-gray;
+    color: $color-black;
+  }
 }

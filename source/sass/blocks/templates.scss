@@ -1,0 +1,14 @@
+.templates__list {
+  @include reset-list;
+}
+
+.templates__title {
+  font-size: 18px;
+  line-height: 1.667;
+  font-weight: $font-weight-bold;
+}
+
+.templates__description {
+  line-height: 1.125;
+  color: $color-gray-dark;
+}
