@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Сайт интернет магазина "nerds":Каталог</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <nav class="page-header__main-nav main-nav">
-        <a href="#" class="main-nav__logo logo">
-          <img src="#" alt="Логотип Нёрдс" class="logo__image logo__image--theme-normal">
+        <a href="index.html" class="main-nav__logo logo">
+          <img src="" alt="Логотип Нёрдс" class="logo__image logo__image-normal">
         </a>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -47,22 +48,22 @@
                 <div class="filter-range__togle filter-range__togle--max"></div>
               </div>
               <div class="filter-range__price-controls">
-                <p class="filter-renge__wrapper">
-                  <label for="min-price" class="filter-range__price-text">От</label>
+                <p class="filter-renge__conteiner">
+                  <label for="min-price" class="filter-range__min-price filter-range__price-text">От</label>
                   <input
                     type="text"
                     name="min-price"
                     value="0"
-                    class="filter-range__price-value"
+                    class="filter-range__price-value filter-range__price-text"
                     id="min-price">
                 </p>
-                <p class="filter-renge__wrapper">
-                  <label for="max-price" class="filter-range__price-text">До</label>
+                <p class="filter-renge__conteiner">
+                  <label for="max-price" class="filter-range__max-price filter-range__price-text">До</label>
                   <input
                     type="text"
                     name="max-price"
                     value="15 000"
-                    class="filter-range__price-value"
+                    class="filter-range__price-value filter-range__price-text"
                     id="max-price">
                 </p>
               </div>
@@ -70,7 +71,7 @@
             <div class="filter__radio-filter">
               <h2 class="filter__title">Сетка:</h2>
               <p class="container filter__container">
-                <label for="adaptive" class="filter__text">Адаптивная</label>
+                <label for="adaptive" class="filter__text-radio filter__text">Адаптивная</label>
                 <input
                   type="radio"
                   name="grid"
@@ -78,10 +79,10 @@
                   checked="checked"
                   id="adaptive"></p>
               <p class="container filter__container">
-                <label for="fixed" class="filter__text">Фиксированная</label>
+                <label for="fixed" class="filter__text-radio filter__text">Фиксированная</label>
                 <input type="radio" name="grid" class="filter__input-radio" id="fixed"></p>
               <p class="container filter__container">
-                <label for="rubber" class="filter__text">Резиновая</label>
+                <label for="rubber" class="filter__text-radio filter__text">Резиновая</label>
                 <input type="radio" name="grid" class="filter__input-radio" id="rubber"></p>
             </div>
             <div class="filter__checkbox-filter">
@@ -102,7 +103,7 @@
                 <label for="basket" class="filter__text">Корзина</label>
                 <input type="checkbox" name="#" id="basket"></p>
             </div>
-            <button class="form__button button button--theme-gray">Показать</button>
+            <button class="form__button button button--gray">Показать</button>
           </form>
         </section>
         <div class="page-main__products">
@@ -126,54 +127,93 @@
             </form>
             <form action="" method="get" class="sorting__list-value">
               <p class="sorting__item">
-                <label for="" class="sorting__text">
-                  <span class="visually-hidden">По увеличению</span></label>
-                <input type="radio" class="sorting__input" checked="checked" name="value"></p>
+                <label for="increase" class="sorting__text visually-hidden">По увеличению</label>
+                <input
+                  type="radio"
+                  class="sorting__input"
+                  checked="checked"
+                  name="value"
+                  id="increase"></p>
               <p class="sorting__item">
-                <label for="" class="sorting__text">
-                  <span class="visually-hidden">По уменьшению</span></label>
-                <input type="radio" class="sorting__input" name="value"></p>
+                <label for="decrescent" class="sorting__text visually-hidden">По уменьшению</label>
+                <input type="radio" class="sorting__input" name="value" id="decrescent"></p>
             </form>
           </section>
           <section class="page-main__templates templates">
             <h2 class="visually-hidden">Результаты поиска:</h2>
-            <ul class="templates__templates-list">
-              <li class="templates__item"><img
-                src=""
-                alt="Седона"
-                class="templates__image templates__image--sedona"
-                width="360"
-                height="576"></li>
-              <li class="templates__item"><img
-                src=""
-                alt="Пинк"
-                class="templates__image templates__image--pink"
-                width="360"
-                height="576"></li>
-              <li class="templates__item"><img
-                src=""
-                alt="Барбершоп"
-                class="templates__image templates__image--barbershop"
-                width="360"
-                height="576"></li>
-              <li class="templates__item"><img
-                src=""
-                alt="Мишка"
-                class="templates__image templates__image--mishka"
-                width="360"
-                height="576"></li>
-              <li class="templates__item"><img
-                src=""
-                alt="Альпус"
-                class="templates__image templates__image--aplus"
-                width="360"
-                height="576"></li>
-              <li class="templates__item"><img
-                src=""
-                alt="Кваст"
-                class="templates__image templates__image--kvast"
-                width="360"
-                height="576"></li>
+            <ul class="templates__list">
+              <li class="templates__item">
+                <div class="templates__container">
+                  <h3 class="templates__title">Sedona</h3>
+                  <p class="templates__description">Информационный сайт для туристов</p>
+                  <a href="#" class="templates__price button button--red">9&nbsp;900&nbsp;руб.</a>
+                </div>
+                <img
+                  src=""
+                  alt="Седона"
+                  class="templates__image templates__image--sedona"
+                  width="360"
+                  height="576"></li>
+              <li class="templates__item">
+                <div class="templates__container">
+                  <h3 class="templates__title">Pink App</h3>
+                  <p class="templates__description">Продуктовый лендинг приложения для iOS и&nbsp;Android</p>
+                  <a href="#" class="templates__price button button--red">9&nbsp;900&nbsp;руб.</a>
+                </div>
+                <img
+                  src=""
+                  alt="Пинк"
+                  class="templates__image templates__image--pink"
+                  width="360"
+                  height="576"></li>
+              <li class="templates__item">
+                <div class="templates__container">
+                  <h3 class="templates__title">Barbershop</h3>
+                  <p class="templates__description">Сайт салоны красоты. Для мужчин, да.</p>
+                  <a href="#" class="templates__price button button--red">9&nbsp;900&nbsp;руб.</a>
+                </div>
+                <img
+                  src=""
+                  alt="Барбершоп"
+                  class="templates__image templates__image--barbershop"
+                  width="360"
+                  height="576"></li>
+              <li class="templates__item">
+                <div class="templates__container">
+                  <h3 class="templates__title">Mishka</h3>
+                  <p class="templates__description">Интернет-магазин вязаных игрушек</p>
+                  <a href="#" class="templates__price button button--red">9&nbsp;900&nbsp;руб.</a>
+                </div>
+                <img
+                  src=""
+                  alt="Мишка"
+                  class="templates__image templates__image--mishka"
+                  width="360"
+                  height="576"></li>
+              <li class="templates__item">
+                <div class="templates__container">
+                  <h3 class="templates__title">A Plus</h3>
+                  <p class="templates__description">Лендинг курсов повышения квалификации</p>
+                  <a href="#" class="templates__price button button--red">9&nbsp;900&nbsp;руб.</a>
+                </div>
+                <img
+                  src=""
+                  alt="Альпус"
+                  class="templates__image templates__image--aplus"
+                  width="360"
+                  height="576"></li>
+              <li class="templates__item">
+                <div class="templates__container">
+                  <h3 class="templates__title">Кваст</h3>
+                  <p class="templates__description">Промо-сайт производителя крафтового кваса</p>
+                  <a href="#" class="templates__price button button--red">9&nbsp;900&nbsp;руб.</a>
+                </div>
+                <img
+                  src=""
+                  alt="Кваст"
+                  class="templates__image templates__image--kvast"
+                  width="360"
+                  height="576"></li>
             </ul>
             <div class="templates__pagination">
               <a
@@ -187,5 +227,44 @@
         </div>
       </div>
     </main>
+    <footer class="page-footer">
+      <section class="page-footer__map map">
+        <div class="page-footer__wrapper">
+          <div class="map__container">
+            <h3 class="map__title">Nёrds design studio</h3>
+            <p class="map__contact">191186, Санкт-Петербург, ул. Б.&nbsp;Конюшенная, д. 19/8</p>
+            <p class="map__phone">тел.&nbsp;+7 (812) 275-75-75</p>
+            <a href="#" class="map__button button">Напишите нам</a>
+          </div>
+        </div>
+        <img
+          src="#"
+          alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел. +7 (812) 275-75-75"
+          class="map__image">
+      </section>
+      <section class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <img src="#" alt="" class="social__image social__image--vk">
+              <span class="visually-hidden">ВКонтакте</span></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <img src="#" alt="" class="social__image social__image--facebook">
+              <span class="visually-hidden">Facebook</span></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link">
+              <img src="#" alt="" class="social__image social__image--instagram">
+              <span class="visually-hidden">Instagram</span></a>
+          </li>
+        </ul>
+        <div class="social__discount">
+          <p class="social__slogan">Давайте дружить, это выгодно!</p>
+          <p class="social__text">Скидка&nbsp;10% для друзей из&nbsp;социальных сетей.</p>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
