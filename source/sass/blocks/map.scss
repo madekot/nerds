@@ -1,12 +1,50 @@
 .map {
+  position: relative;
   line-height: 1.12;
   color: $color-gray-dark;
 }
 
+.map__coninner-inner {
+  padding-top: 55px;
+  padding-bottom: 50px;
+  @include inner;
+}
+
 .map__title {
+  margin: 0;
+  margin-bottom: 22px;
   font-weight: $font-weight-bold;
   font-size: 18px;
   line-height: 1.67;
   color: $color-black;
   text-transform: uppercase;
+}
+
+.map__image {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: calc(50% - 720px)
+}
+
+.map__container-contact {
+  box-sizing: border-box;
+  padding: 50px;
+  width: 320px;
+  background-color: $color-white;
+}
+
+.map__contact {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.map__phone {
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.map__button {
+  padding-left: 44px;
+  padding-right: 44px;
 }

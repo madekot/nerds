@@ -1,14 +1,33 @@
-.slider__list {
-  @include reset-list;
+.slider {
   background-color: $color-gray;
+  padding-top: 55px;
+  padding-bottom: 80px;
+}
+
+.slider__list {
+  width: 560px;
+
+  background-color: $color-gray;
+
+  @include reset-list;
 }
 
 .slider__lead {
+  margin: 0;
+  margin-bottom: 25px;
+
   font-weight: $font-weight-medium;
   font-size: 55px;
   line-height: 1;
 }
 
 .slider__text {
-  color: $color-dark-blue
+  color: $color-dark-blue;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.slider__button {
+  padding-left: 55px;
+  padding-right: 55px;
 }

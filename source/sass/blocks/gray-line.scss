@@ -1,0 +1,27 @@
+.gray-line {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 2px;
+
+    background-color: $color-gray;
+  }
+
+  &--bottom::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 2px;
+
+    background-color: $color-gray;
+  }
+}

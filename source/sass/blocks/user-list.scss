@@ -1,11 +1,36 @@
 .user-list {
-  @include reset-list;
-
   font-weight: $font-weight-medium;
   line-height: 1.875;
   text-transform: uppercase;
 }
 
+.user-list__list {
+  @include reset-list;
+
+  display: flex;
+  padding-top: 30px;
+}
+
+.user-list__item {
+  position: relative;
+
+  &--basket::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 7px);
+    bottom: 0;
+    width: 16px;
+    height: 15px;
+    background-image: url(/img/cart-icon.svg);
+  }
+}
+
 .user-list__link {
   @include inherin-link;
+
+  padding-top: 14px;
+  padding-right: 24px;
+  padding-bottom: 14px;
+  padding-left: 45px;
+  margin-right: -24px;
 }

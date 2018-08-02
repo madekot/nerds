@@ -1,11 +1,22 @@
 .site-list {
-  @include reset-list;
-
   font-weight: $font-weight-medium;
   line-height: 1.875;
   text-transform: uppercase;
 }
 
+.site-list__list {
+  @include reset-list;
+
+  display: flex;
+  padding-top: 30px;
+}
+
+
 .site-list__link {
   @include inherin-link;
+
+  padding-top: 14px;
+  padding-right: 24px;
+  padding-bottom: 14px;
+  padding-left: 24px;
 }

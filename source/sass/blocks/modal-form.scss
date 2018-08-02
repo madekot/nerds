@@ -1,0 +1,62 @@
+.modal-form__container-contact {
+  display: flex;
+  margin: 0;
+  margin-bottom: 33px;
+}
+
+.modal-form__container-message {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 46px;
+}
+
+.modal-form__contact {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.modal-form__text {
+  margin-bottom: 10px;
+
+  font-weight: $font-weight-bold;
+}
+
+.modal-form__input {
+  box-sizing: border-box;
+  width: 360px;
+  height: 50px;
+  padding-top: 21px;
+  padding-right: 15px;
+  padding-bottom: 21px;
+  padding-left: 15px;
+
+  font: inherit;
+
+  border: 2px solid $color-gray2;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: $color-gray-darken;
+  }
+
+  &--textarea {
+    box-sizing: border-box;
+    min-height: 118px;
+    max-width: 100%;
+    min-width: 100%;
+    padding-top: 13px;
+    padding-left: 14px;
+  }
+}
+
+.modal-form__button {
+  padding-left: 85px;
+  padding-right: 85px;
+}

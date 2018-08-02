@@ -1,0 +1,15 @@
+.main-nav {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 18px;
+
+  @include inner;
+}
+
+.main-nav__logo {
+  margin-right: 175px;
+}
+
+.main-nav__site-list {
+  margin-right: auto;
+}
