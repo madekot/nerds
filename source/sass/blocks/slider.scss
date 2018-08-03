@@ -1,15 +1,14 @@
 .slider {
   background-color: $color-gray;
-  padding-top: 55px;
-  padding-bottom: 80px;
+}
+
+.slider__container {
+  @include inner;
 }
 
 .slider__list {
-  width: 560px;
-
-  background-color: $color-gray;
-
   @include reset-list;
+  width: 560px;
 }
 
 .slider__lead {

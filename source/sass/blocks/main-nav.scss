@@ -1,9 +1,5 @@
 .main-nav {
   display: flex;
-  padding-top: 50px;
-  padding-bottom: 18px;
-
-  @include inner;
 }
 
 .main-nav__logo {
@@ -12,4 +8,9 @@
 
 .main-nav__site-list {
   margin-right: auto;
+  padding-top: 30px;
+}
+
+.main-nav__user-list {
+  padding-top: 30px;
 }

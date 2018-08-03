@@ -1,20 +1,57 @@
-.page-main {
+.page-main__slider {
+  padding-top: 71px;
   padding-bottom: 80px;
 }
 
-.page-main__title {
-  font-size: 55px;
-  line-height: 1;
-  font-weight: $font-weight-medium;
+.page-main__services {
+  @include inner;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
-.page-main__wrapper {
-  width: 100%;
-  &--gray {
-    background-color: $color-gray;
-  }
+.page-main__info {
+  @include inner;
+  padding-top: 40px;
+  padding-bottom: 74px;
 }
 
 .page-main__inner {
   @include inner;
+}
+
+.page-main__brends {
+  @include inner;
+  margin-bottom: 80px;
+}
+
+.page-main__title {
+  width: 840px;
+  margin: 0 auto;
+
+  font-weight: $font-weight-medium;
+  font-size: 55px;
+  line-height: 1;
+  text-align: center;
+}
+
+.page-main__container-title {
+  width: 100%;
+  padding-top: 57px;
+  padding-bottom: 57px;
+  min-height: 106px;
+
+  background-color: $color-gray;
+}
+
+.page-main__container-flex {
+  display: flex;
+}
+
+.page-main__filter {
+  width: 300px;
+  margin-right: auto;
+}
+
+.page-main__products {
+  width: 760px;
 }
