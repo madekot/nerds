@@ -7,13 +7,14 @@
   display: flex;
   padding-top: 70px;
   padding-bottom: 70px;
+  margin-right: 140px;
 }
 
 .social__item {
   margin-right: 12px;
 
   &:last-child{
-    margin-right: 140px;
+    margin-right: 0;
   };
 }
 

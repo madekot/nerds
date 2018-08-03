@@ -8,15 +8,25 @@
   @include reset-list;
 
   display: flex;
-  padding-top: 30px;
 }
 
 
 .site-list__link {
+  position: relative;
   @include inherin-link;
 
   padding-top: 14px;
   padding-right: 24px;
   padding-bottom: 14px;
   padding-left: 24px;
+
+  &--current::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 48px);
+    height: 2px;
+    bottom: 2px;
+    right: 24px;
+    background-color: $color-red;
+  }
 }

@@ -5,15 +5,20 @@
     <title>Сайт интернет магазина "nerds":Каталог</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header class="page-header">
+  <body class="page">
+    <header class="header page__header">
       <h1 class="visually-hidden">Магазин по созданию и продвижению сайтов Нердс</h1>
-      <nav class="page-header__main-nav main-nav">
+      <nav class="header__main-nav main-nav">
         <a href="index.html" class="main-nav__logo logo">
-          <img src="img/nerds-logo.svg" alt="Логотип Нёрдс" class="logo__image logo__image--default" width="160" height="65">
+          <img
+            src="img/nerds-logo.svg"
+            alt="Логотип Нёрдс"
+            class="logo__image logo__image--default"
+            width="160"
+            height="65">
         </a>
         <div class="main-nav__site-list site-list">
-          <ul class="site-list__list">
+          <ul class="main-nav__site-list site-list site-list__list">
             <li class="site-list__item">
               <a href="#" class="site-list__link">Студия</a>
             </li>
@@ -21,7 +26,7 @@
               <a href="#" class="site-list__link">Клиенты</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html" class="site-list__link">Магазин</a>
+              <a href="catalog.html" class="site-list__link site-list__link--current">Магазин</a>
             </li>
             <li class="site-list__item">
               <a href="#" class="site-list__link">Контакты</a>
@@ -30,23 +35,23 @@
         </div>
         <div class="main-nav__user-list user-list">
           <ul class="user-list__list">
-            <li class="user-list__item">
+            <li class="user-list__item user-list__item--basket">
               <a href="#" class="user-list__link">Корзина</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
-    <main class="page-main page-main__wrapper">
-      <div class="page-main__wrapper page-main__wrapper--gray">
-        <h1 class="page-main__title page-main__inner">
+    <main class="page-main">
+      <div class="page-main__container-title">
+        <h1 class="page-main__title">
           Магазин готовых шаблонов</h1>
       </div>
-      <div class="container-flex page-main__inner">
+      <div class="page-main__inner page-main__container-flex">
         <section class="page-main__filter">
           <form action="" method="get" class="filter page-main__form">
             <div class="filter__range filter-range">
-              <h2 class="filter-range__title">Cтоимость:</h2>
+              <h2 class="filter__title">Cтоимость:</h2>
               <div class="filter-range__range-controls">
                 <div class="filter-range__scale"></div>
                 <div class="filter-range__togle filter-range__togle--min"></div>
@@ -91,7 +96,7 @@
                 <input type="radio" name="grid" class="filter__input-radio" id="rubber"></p>
             </div>
             <div class="filter__checkbox-filter">
-              <h2 class="filter__title">Особенности:</h2>
+              <h2 class="filter__title filter__checkbox-title">Особенности:</h2>
               <p class="filter__container">
                 <label for="slider" class="filter__text">Слайдер</label>
                 <input type="checkbox" name="#" checked="checked" id="slider"></p>
@@ -234,34 +239,46 @@
     </main>
     <footer class="page-footer">
       <section class="page-footer__map map">
-        <div class="page-footer__wrapper">
-          <div class="map__container">
+        <div class="map__coninner-inner">
+          <div class="map__container-contact">
             <h3 class="map__title">Nёrds design studio</h3>
-            <p class="map__contact">191186, Санкт-Петербург, ул. Б.&nbsp;Конюшенная, д. 19/8</p>
+            <p class="map__contact">191186, Санкт-Петербург,<br>
+              ул. Б.&nbsp;Конюшенная, д. 19/8</p>
             <p class="map__phone">тел.&nbsp;+7 (812) 275-75-75</p>
             <a href="#" class="map__button button">Напишите нам</a>
           </div>
         </div>
-        <img
-          src="#"
-          alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел. +7 (812) 275-75-75"
-          class="map__image">
+        <div class="map__container">
+          <img
+            src="img/map.jpg"
+            alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел. +7 (812) 275-75-75"
+            class="map__image">
+        </div>
       </section>
       <section class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
             <a href="#" class="social__link">
-              <img src="#" alt="" class="social__image social__image--vk">
+              <img
+                src="img\vk-icon.svg"
+                alt="ВКонтакте"
+                class="social__image social__image--vk">
               <span class="visually-hidden">ВКонтакте</span></a>
           </li>
           <li class="social__item">
             <a href="#" class="social__link">
-              <img src="#" alt="" class="social__image social__image--facebook">
+              <img
+                src="img\fb-icon.svg"
+                alt="Facebook"
+                class="social__image social__image--facebook">
               <span class="visually-hidden">Facebook</span></a>
           </li>
           <li class="social__item">
             <a href="#" class="social__link">
-              <img src="#" alt="" class="social__image social__image--instagram">
+              <img
+                src="img\insta-icon.svg"
+                alt="Instagram"
+                class="social__image social__image--instagram">
               <span class="visually-hidden">Instagram</span></a>
           </li>
         </ul>
