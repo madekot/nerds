@@ -1,13 +1,16 @@
+.page-main__slider {
+  margin-bottom: 80px;
+}
+
 .page-main__services {
   @include inner;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 .page-main__info {
   @include inner;
   padding-top: 40px;
-  padding-bottom: 74px;
+  margin-bottom: 74px;
 }
 
 .page-main__inner {
@@ -16,7 +19,6 @@
 
 .page-main__brends {
   @include inner;
-  margin-bottom: 80px;
 }
 
 .page-main__title {

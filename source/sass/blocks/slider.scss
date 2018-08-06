@@ -1,11 +1,11 @@
 .slider {
   background-color: $color-gray;
+  padding-top: 70px;
+  padding-bottom: 80px;
 }
 
 .slider__container {
   @include inner;
-  padding-top: 55px;
-  padding-bottom: 80px;
 }
 
 .slider__list {
