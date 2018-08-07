@@ -60,61 +60,69 @@
               </div>
               <div class="filter-range__price-controls">
                 <p class="filter-renge__conteiner">
-                  <label for="min-price" class="filter-range__min-price filter-range__price-text">От</label>
                   <input
-                    type="text"
-                    name="min-price"
-                    value="0"
-                    class="filter-range__price-value filter-range__price-text input"
-                    id="min-price">
+                  type="text"
+                  name="min-price"
+                  value="0"
+                  class="filter-range__price-value filter-range__price-text input"
+                  id="min-price">
+                  <label for="min-price" class="filter-range__min-price filter-range__price-text">От</label>
                 </p>
                 <p class="filter-renge__conteiner">
-                  <label for="max-price" class="filter-range__max-price filter-range__price-text">До</label>
                   <input
-                    type="text"
-                    name="max-price"
-                    value="15 000"
-                    class="filter-range__price-value filter-range__price-text input"
-                    id="max-price">
+                  type="text"
+                  name="max-price"
+                  value="15 000"
+                  class="filter-range__price-value filter-range__price-text input"
+                  id="max-price">
+                  <label for="max-price" class="filter-range__max-price filter-range__price-text">До</label>
                 </p>
               </div>
             </div>
             <div class="filter__radio-filter">
               <h2 class="filter__title">Сетка:</h2>
-              <p class="container filter__container">
-                <label for="adaptive" class="filter__text-radio filter__text">Адаптивная</label>
+              <p class="filter__container">
                 <input
-                  type="radio"
-                  name="grid"
-                  class="filter__input-radio"
-                  checked="checked"
-                  id="adaptive"></p>
-              <p class="container filter__container">
-                <label for="fixed" class="filter__text-radio filter__text">Фиксированная</label>
-                <input type="radio" name="grid" class="filter__input-radio" id="fixed"></p>
-              <p class="container filter__container">
-                <label for="rubber" class="filter__text-radio filter__text">Резиновая</label>
-                <input type="radio" name="grid" class="filter__input-radio" id="rubber"></p>
+                type="radio"
+                name="grid"
+                class="filter__input-radio visually-hidden"
+                checked="checked"
+                id="adaptive">
+                <label for="adaptive" class="filter__label filter__label--radio">Адаптивная</label>
+              </p>
+              <p class="filter__container">
+                <input type="radio" name="grid" class="filter__input-radio visually-hidden" id="fixed">
+                <label for="fixed" class="filter__label filter__label--radio">Фиксированная</label>
+              </p>
+              <p class="filter__container">
+                <input type="radio" name="grid" class="filter__input-radio visually-hidden" id="rubber">
+                <label for="rubber" class="filter__label filter__label--radio">Резиновая</label>
+              </p>
             </div>
             <div class="filter__checkbox-filter">
               <h2 class="filter__title filter__checkbox-title">Особенности:</h2>
               <p class="filter__container">
-                <label for="slider" class="filter__text">Слайдер</label>
-                <input type="checkbox" name="#" checked="checked" id="slider"></p>
+                <input class="filter__input-checkbox visually-hidden" type="checkbox" name="#" checked="checked" id="slider">
+                <label for="slider" class="filter__label filter__label--checkbox">Слайдер</label>
+              </p>
               <p class="filter__container">
-                <label for="feature" class="filter__text">Блок преимуществ</label>
-                <input type="checkbox" name="#" id="feature"></p>
+                <input class="filter__input-checkbox visually-hidden" type="checkbox" name="#" id="feature">
+                <label for="feature" class="filter__label filter__label--checkbox">Блок преимуществ</label>
+              </p>
               <p class="filter__container">
-                <label for="news" class="filter__text">Новости</label>
-                <input type="checkbox" name="#" checked="checked" id="news"></p>
+                <input class="filter__input-checkbox visually-hidden" type="checkbox" name="#" checked="checked" id="news">
+                <label for="news" class="filter__label filter__label--checkbox">Новости</label>
+              </p>
               <p class="filter__container">
-                <label for="gallery" class="filter__text">Галерея</label>
-                <input type="checkbox" name="#" id="gallery"></p>
+                <input class="filter__input-checkbox visually-hidden" type="checkbox" name="#" id="gallery">
+                <label for="gallery" class="filter__label filter__label--checkbox">Галерея</label>
+              </p>
               <p class="filter__container">
-                <label for="basket" class="filter__text">Корзина</label>
-                <input type="checkbox" name="#" id="basket"></p>
+                <input class="filter__input-checkbox visually-hidden" type="checkbox" name="#" id="basket">
+                <label for="basket" class="filter__label filter__label--checkbox">Корзина</label>
+              </p>
             </div>
-            <button class="form__button button button--gray">Показать</button>
+            <button class="filter__button button button--gray">Показать</button>
           </form>
         </section>
         <div class="page-main__products">
