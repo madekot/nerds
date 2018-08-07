@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page">
-    <header class="page-header">
+    <header class="page-header page__header">
       <h1 class="visually-hidden">Магазин по созданию и продвижению сайтов Нердс</h1>
       <nav class="page-header__main-nav main-nav">
         <a href="index.html" class="main-nav__logo logo">
@@ -51,11 +51,12 @@
         <section class="page-main__filter">
           <form action="" method="get" class="filter page-main__form">
             <div class="filter__range filter-range">
-              <h2 class="filter__title">Cтоимость:</h2>
+              <h2 class="filter-range__title">Cтоимость:</h2>
               <div class="filter-range__range-controls">
-                <div class="filter-range__scale"></div>
-                <div class="filter-range__togle filter-range__togle--min"></div>
-                <div class="filter-range__togle filter-range__togle--max"></div>
+                <div class="filter-range__scale">
+                  <button type="button" class="filter-range__togle filter-range__togle--min"></button>
+                  <button type="button" class="filter-range__togle filter-range__togle--max"></button>
+                </div>
               </div>
               <div class="filter-range__price-controls">
                 <p class="filter-renge__conteiner">
@@ -64,7 +65,7 @@
                     type="text"
                     name="min-price"
                     value="0"
-                    class="filter-range__price-value filter-range__price-text"
+                    class="filter-range__price-value filter-range__price-text input"
                     id="min-price">
                 </p>
                 <p class="filter-renge__conteiner">
@@ -73,7 +74,7 @@
                     type="text"
                     name="max-price"
                     value="15 000"
-                    class="filter-range__price-value filter-range__price-text"
+                    class="filter-range__price-value filter-range__price-text input"
                     id="max-price">
                 </p>
               </div>

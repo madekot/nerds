@@ -1,4 +1,5 @@
 .filter__title {
+  margin: 0;
   font-size: 18px;
   line-height: 1.667;
   font-weight: $font-weight-bold;
@@ -8,4 +9,8 @@
 .filter__text {
   line-height: 1.25;
   color: $color-dark-blue;
+}
+
+.filter__range {
+  margin-bottom: 36px;
 }
