@@ -130,32 +130,41 @@
             <h2 class="sorting__title">Сортировать:</h2>
             <form action="" method="get" class="sorting__list-type">
               <p class="sorting__item">
-                <label for="price" class="sorting__text">По цене</label>
                 <input
-                  type="radio"
-                  name="type"
-                  class="sorting__input"
-                  checked="checked"
-                  id="price"></p>
+                type="radio"
+                name="type"
+                class="sorting__input visually-hidden"
+                checked="checked"
+                id="price">
+                <label for="price" class="sorting__text">По цене</label>
+                </p>
               <p class="sorting__item">
+                <input type="radio" name="type" class="sorting__input visually-hidden" id="type">
                 <label for="type" class="sorting__text">По типу</label>
-                <input type="radio" name="type" class="sorting__input" id="type"></p>
+              </p>
               <p class="sorting__item">
+                <input type="radio" name="type" class="sorting__input visually-hidden" id="name">
                 <label for="name" class="sorting__text">По названию</label>
-                <input type="radio" name="type" class="sorting__input" id="name"></p>
+              </p>
             </form>
             <form action="" method="get" class="sorting__list-value">
-              <p class="sorting__item">
-                <label for="increase" class="sorting__text visually-hidden">По увеличению</label>
+              <p class="sorting__item-value sorting__item-value--max">
                 <input
-                  type="radio"
-                  class="sorting__input"
-                  checked="checked"
-                  name="value"
-                  id="increase"></p>
-              <p class="sorting__item">
-                <label for="decrescent" class="sorting__text visually-hidden">По уменьшению</label>
-                <input type="radio" class="sorting__input" name="value" id="decrescent"></p>
+                type="radio"
+                class="sorting__input-value visually-hidden"
+                checked="checked"
+                name="value"
+                id="increase">
+                <label for="increase" class="sorting__text-value sorting__text-value--max">
+                  <span class="visually-hidden">По увеличению</span>
+                </label>
+              </p>
+              <p class="sorting__item-value sorting__item-value--min">
+                <input type="radio" class="sorting__input-value visually-hidden" name="value" id="decrescent">
+                <label for="decrescent" class="sorting__text-value sorting__text-value--min">
+                  <span class="visually-hidden">По уменьшению</span>
+                </label>
+              </p>
             </form>
           </section>
           <section class="page-main__templates templates">
@@ -246,7 +255,7 @@
         </div>
       </div>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer page__footer">
       <section class="page-footer__map map">
         <div class="map__coninner-inner">
           <div class="map__container-contact">
