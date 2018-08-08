@@ -2,6 +2,8 @@
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 62px;
 }
 
 .templates__item {
@@ -87,4 +89,26 @@
 
 .templates__price {
   padding: 16px 60px;
+}
+
+.templates__button {
+  padding: 16px 20px;
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--big {
+    padding: 16px 78px;
+  }
+
+  &--current {
+    background-color: $color-white;
+    box-shadow: inset 0 0 0 3px $color-gray7;
+  }
+}
+
+.templates__pagination {
+  display: flex;
 }
