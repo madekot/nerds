@@ -24,7 +24,8 @@
 
       background-color: $color-white;
       border-radius: 50%;
-      box-shadow: inset 0 0 0 4px $color-gray3,
+      opacity: 0.4;
+      box-shadow: inset 0 0 0 4px $color-gray10,
       inset 0 0 0 8px $color-white;
     }
   }
@@ -43,6 +44,14 @@
       background-repeat: no-repeat;
     }
   }
+
+  &--disabled {
+    color: rgba(40, 49, 54, 0.3);
+
+    &::after {
+      opacity: 0.1;
+    }
+  }
 }
 
 .filter__container {
@@ -58,7 +67,7 @@
 }
 
 .filter__input-radio:checked + .filter__label--radio::after {
-  background-color: $color-gray3;
+  background-color: $color-gray10;
 }
 
 .filter__input-checkbox:checked + .filter__label--checkbox::after {

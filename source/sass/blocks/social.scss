@@ -24,6 +24,12 @@
   height: 78px;
   border-radius: 50%;
   background-color: $color-gray-light;
+
+  padding: 0;
+
+  &:active .social__image {
+    opacity: 0.3;
+  }
 }
 
 .social__slogan {

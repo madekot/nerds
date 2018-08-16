@@ -24,6 +24,14 @@
   }
 }
 
-.brends__image {
-  opacity: 0.2;
+.brends-list__link {
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
 }
