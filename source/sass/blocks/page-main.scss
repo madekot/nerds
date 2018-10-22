@@ -4,14 +4,16 @@
 
 .page-main__services {
   @include inner;
+
   margin-bottom: 80px;
 }
 
 .page-main__info {
-  position: relative;
   @include inner;
-  padding-top: 40px;
+  position: relative;
+
   margin-bottom: 74px;
+  padding-top: 40px;
 }
 
 .page-main__inner {
@@ -34,9 +36,9 @@
 
 .page-main__container-title {
   width: 100%;
+  margin-bottom: 53px;
   padding-top: 70px;
   padding-bottom: 110px;
-  margin-bottom: 53px;
 
   background-color: $color-gray;
 }
@@ -52,8 +54,8 @@
 }
 
 .page-main__products {
-  padding-top: 3px;
   width: 760px;
+  padding-top: 3px;
 }
 
 .page-main__sorting {

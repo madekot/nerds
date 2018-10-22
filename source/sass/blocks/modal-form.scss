@@ -48,15 +48,15 @@
 
   &--textarea {
     box-sizing: border-box;
-    min-height: 118px;
-    max-width: 100%;
     min-width: 100%;
+    max-width: 100%;
+    min-height: 118px;
     padding-top: 13px;
     padding-left: 14px;
   }
 }
 
 .modal-form__button {
-  padding-left: 85px;
   padding-right: 85px;
+  padding-left: 85px;
 }

@@ -5,17 +5,19 @@
 .sorting__title {
   margin: 0;
   margin-right: auto;
+
+  font-weight: $font-weight-bold;
   font-size: 18px;
   line-height: 1;
-  font-weight: $font-weight-bold;
   text-transform: uppercase;
 }
 
 .sorting__text {
-font-size: 14px;
-line-height: 1.286;
-opacity: 0.3;
-text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.286;
+  text-transform: uppercase;
+
+  opacity: 0.3;
 }
 
 .sorting__list-type {
@@ -34,13 +36,15 @@ text-transform: uppercase;
 
 .sorting__input:checked + .sorting__text {
   color: $color-black;
+
   opacity: 1;
 }
 
 .sorting__list-value {
   position: relative;
-  width: 40px;
+
   display: flex;
+  width: 40px;
 }
 
 .sorting__text-value {
@@ -49,7 +53,9 @@ text-transform: uppercase;
   &::before {
     content: "";
     position: absolute;
-	  border: 6px solid transparent;	border-top: 11px solid $color-gray4;
+
+    border: 6px solid transparent;
+    border-top: 11px solid $color-gray4;
   }
 
   &--max::before {
@@ -60,10 +66,12 @@ text-transform: uppercase;
   &--min::before {
     top: 0;
     right: 0;
+
     transform: rotate(180deg);
   }
 }
 
 .sorting__input-value:checked + .sorting__text-value::before {
-  border: 6px solid transparent;	border-top: 11px solid $color-black2;
+  border: 6px solid transparent;
+  border-top: 11px solid $color-black2;
 }

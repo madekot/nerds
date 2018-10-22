@@ -1,11 +1,11 @@
 .filter-range__title {
   margin: 0;
+  margin-bottom: 48px;
+
   font-weight: $font-weight-bold;
   font-size: 18px;
   line-height: 1.667;
   text-transform: uppercase;
-
-  margin-bottom: 48px;
 }
 
 .filter-range__range-controls {
@@ -47,7 +47,6 @@
   background-color: $color-gray3;
   border: solid $color-white 8px;
   border-radius: 50%;
-
   box-shadow: 0 2px 0 0 $color-gray2;
 
   &--min {
@@ -76,9 +75,9 @@
 }
 
 .filter-renge__conteiner {
-  margin: 0;
   display: flex;
   align-items: center;
+  margin: 0;
   margin-right: 33px;
 
   &:last-child {

@@ -55,6 +55,7 @@
 
 .info__item {
   position: relative;
+
   margin-bottom: 24px;
   padding-left: 36px;
 
@@ -67,11 +68,13 @@
   &::before {
     content: "";
     position: absolute;
+    top: calc(50% - 1px);;
+    left: 0;
+
     width: 25px;
     height: 2px;
+
     background-color: $color-red;
-    left: 0;
-    top: calc(50% - 1px)
   }
 }
 

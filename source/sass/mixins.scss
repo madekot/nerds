@@ -1,17 +1,17 @@
 // Гарнитура + толщина шрифта
 @mixin font-main-regular {
-  font-family: $font-family-main;
   font-weight: $font-weight-regular;
+  font-family: $font-family-main;
 }
 
 @mixin font-main-medium {
-  font-family: $font-family-main;
   font-weight: $font-weight-medium;
+  font-family: $font-family-main;
 }
 
 @mixin font-main-bold {
-  font-family: $font-family-main;
   font-weight: $font-weight-bold;
+  font-family: $font-family-main;
 }
 
 // Ссылки наследуют стили от родителя
@@ -25,6 +25,7 @@
 @mixin reset-list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 

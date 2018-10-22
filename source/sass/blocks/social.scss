@@ -4,6 +4,7 @@
 
 .social__list {
   @include reset-list;
+
   display: flex;
   margin-right: 140px;
 }
@@ -11,7 +12,7 @@
 .social__item {
   margin-right: 12px;
 
-  &:last-child{
+  &:last-child {
     margin-right: 0;
   };
 }
@@ -22,10 +23,10 @@
   align-items: center;
   width: 78px;
   height: 78px;
-  border-radius: 50%;
-  background-color: $color-gray-light;
-
   padding: 0;
+
+  background-color: $color-gray-light;
+  border-radius: 50%;
 
   &:active .social__image {
     opacity: 0.3;
@@ -35,13 +36,15 @@
 .social__slogan {
   margin: 0;
   margin-bottom: 10px;
+
+  font-weight: $font-weight-bold;
   font-size: 36px;
   line-height: 1;
-  font-weight: $font-weight-bold;
 }
 
 .social__text {
   margin: 0;
-  color: $color-gray-darken;
+
   line-height: 1.375;
+  color: $color-gray-darken;
 }

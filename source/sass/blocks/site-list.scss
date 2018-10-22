@@ -5,28 +5,31 @@
 }
 
 .site-list__list {
-  @include reset-list;
-
   display: flex;
+
+  @include reset-list;
 }
 
 
 .site-list__link {
   position: relative;
-  @include inherin-link;
 
   padding-top: 14px;
   padding-right: 24px;
   padding-bottom: 14px;
   padding-left: 24px;
 
+  @include inherin-link;
+
   &--current::before {
     content: "";
     position: absolute;
+    right: 24px;
+    bottom: 2px;
+
     width: calc(100% - 48px);
     height: 2px;
-    bottom: 2px;
-    right: 24px;
+
     background-color: $color-red;
   }
 

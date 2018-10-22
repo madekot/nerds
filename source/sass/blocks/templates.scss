@@ -1,5 +1,6 @@
 .templates__list {
   @include reset-list;
+
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -7,18 +8,20 @@
 }
 
 .templates__item {
-  display: flex;
   position: relative;
-  padding-top: 36px;
-  border-radius: 3px 3px 0 0;
+
+  display: flex;
   width: 360px;
   min-height: 580px;
-  background: linear-gradient(to bottom, $color-gray5 40px, transparent 40px,);
   margin-right: 40px;
   margin-bottom: 33px;
+  padding-top: 36px;
+
+  background: linear-gradient(to bottom, $color-gray5 40px, transparent 40px,);
+  border-radius: 3px 3px 0 0;
 
   &:nth-child(2n) {
-    margin-right: 0px;
+    margin-right: 0;
   }
 
   &:nth-last-child(-n+2) {
@@ -30,10 +33,12 @@
     position: absolute;
     top: 14px;
     left: 16px;
+
     width: 14px;
     height: 14px;
-    border-radius: 50%;
+
     background-color: $color-white;
+    border-radius: 50%;
     box-shadow: 23px 0 0 0 $color-white,
     46px 0 0 0 $color-white;
   }
@@ -57,6 +62,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+
   box-shadow: inset 0 0 0 2px $color-gray6;
 }
 
@@ -70,9 +76,10 @@
 .templates__title {
   margin: 0;
   margin-bottom: 16px;
+
+  font-weight: $font-weight-bold;
   font-size: 18px;
   line-height: 1.667;
-  font-weight: $font-weight-bold;
   text-transform: uppercase;
 }
 
@@ -80,26 +87,29 @@
   width: 240px;
   margin: 0;
   margin-bottom: 30px;
+
   line-height: 1.125;
-  color: $color-gray-dark;
   text-align: center;
+  color: $color-gray-dark;
 }
 
 .templates__container {
-  visibility: hidden;
-  box-sizing: border-box;
-  min-height: 231px;
+  position: relative;
+  z-index: 10;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  z-index: 10;
-  background-color:$color-gray;
+  box-sizing: border-box;
+  min-height: 231px;
   margin-top: auto;
   padding-top: 27px;
-  padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 30px;
+  padding-left: 30px;
+
+  background-color: $color-gray;
+  visibility: hidden;
 }
 
 .templates__price {
@@ -107,8 +117,8 @@
 }
 
 .templates__button {
-  padding: 16px 20px;
   margin-right: 12px;
+  padding: 16px 20px;
 
   &:last-child {
     margin-right: 0;

@@ -1,5 +1,6 @@
 .map {
   position: relative;
+
   line-height: 1.12;
   color: $color-gray-dark;
 }
@@ -7,12 +8,14 @@
 .map__coninner-inner {
   padding-top: 55px;
   padding-bottom: 50px;
+
   @include inner;
 }
 
 .map__title {
   margin: 0;
   margin-bottom: 22px;
+
   font-weight: $font-weight-bold;
   font-size: 18px;
   line-height: 1.67;
@@ -22,15 +25,16 @@
 
 .map__image {
   position: absolute;
-  z-index: -10;
   top: 0;
-  left: calc(50% - 720px)
+  left: calc(50% - 720px);;
+  z-index: -10;
 }
 
 .map__container-contact {
   box-sizing: border-box;
-  padding: 50px;
   width: 320px;
+  padding: 50px;
+
   background-color: $color-white;
 }
 
@@ -45,6 +49,6 @@
 }
 
 .map__button {
-  padding-left: 44px;
   padding-right: 44px;
+  padding-left: 44px;
 }

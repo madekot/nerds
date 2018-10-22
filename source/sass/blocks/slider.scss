@@ -1,7 +1,8 @@
 .slider {
-  background-color: $color-gray;
   padding-top: 70px;
   padding-bottom: 80px;
+
+  background-color: $color-gray;
 }
 
 .slider__container {
@@ -9,9 +10,9 @@
 }
 
 .slider__list {
-  @include reset-list;
-
   width: 560px;
+
+  @include reset-list;
 }
 
 .slider__lead {
@@ -24,12 +25,13 @@
 }
 
 .slider__text {
-  color: $color-dark-blue;
   margin: 0;
   margin-bottom: 40px;
+
+  color: $color-dark-blue;
 }
 
 .slider__button {
-  padding-left: 55px;
   padding-right: 55px;
+  padding-left: 55px;
 }

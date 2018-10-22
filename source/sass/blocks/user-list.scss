@@ -5,9 +5,9 @@
 }
 
 .user-list__list {
-  @include reset-list;
-
   display: flex;
+
+  @include reset-list;
 }
 
 .user-list__item {
@@ -18,20 +18,22 @@
     position: absolute;
     top: calc(50% - 7px);
     bottom: 0;
+
     width: 16px;
     height: 15px;
+
     background-image: url(/img/cart-icon.svg);
   }
 }
 
 .user-list__link {
-  @include inherin-link;
-
+  margin-right: -24px;
   padding-top: 14px;
   padding-right: 24px;
   padding-bottom: 14px;
   padding-left: 45px;
-  margin-right: -24px;
+
+  @include inherin-link;
 
   &:hover {
     color: $color-red;
