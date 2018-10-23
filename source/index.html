@@ -46,6 +46,14 @@
       <section class="page-main__slider slider">
         <div class="slider__container">
           <h2 class="visually-hidden">Наши услуги в слайдах</h2>
+          <input class="slider__toggle visually-hidden" name="slider__toggle" type="radio" checked id="slide-one"></input>
+          <input class="slider__toggle visually-hidden" name="slider__toggle" type="radio" id="slide-two"></input>
+          <input class="slider__toggle visually-hidden" name="slider__toggle" type="radio" id="slide-three"></input>
+          <div class="slider__controls">
+            <label class="slider__controls-item" for="slide-one">Первый</label>
+            <label class="slider__controls-item" for="slide-two">Второй</label>
+            <label class="slider__controls-item" for="slide-three">Третий</label>
+          </div>
           <ul class="slider__list">
             <li class="slider__item">
               <p class="slider__lead">Долго, дорого, скрупулезно.</p>
@@ -53,14 +61,14 @@
                 <br>для вашего сайта или мобильного приложения.</p>
               <a href="#" class="slider__button button">Узнать больше</a>
             </li>
-            <li class="slider__item visually-hidden">
+            <li class="slider__item">
               <p class="slider__lead">Любим математику как никто другой</p>
               <p class="slider__text">Никакого креатива, только математические
                 <br>формулы для расчета идеальных пропорций.
               </p>
               <a href="#" class="slider__button button">Узнать больше</a>
             </li>
-            <li class="slider__item visually-hidden">
+            <li class="slider__item">
               <p class="slider__lead">Только ночь,
                 <br>только хардкор</p>
               <p class="slider__text">Работать днем, как все? Мы против этого.
@@ -69,11 +77,6 @@
               <a href="#" class="slider__button button">Узнать больше</a>
             </li>
           </ul>
-          <p class="slider__toggles visually-hidden">
-            <button class="slider__toggle" type="button"></button>
-            <button class="slider__toggle" type="button"></button>
-            <button class="slider__toggle" type="button"></button>
-          </p>
         </div>
       </section>
       <section class="page-main__services services">
