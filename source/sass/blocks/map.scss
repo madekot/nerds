@@ -30,6 +30,13 @@
   z-index: -10;
 }
 
+.map__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+
 .map__container-contact {
   box-sizing: border-box;
   width: 320px;
