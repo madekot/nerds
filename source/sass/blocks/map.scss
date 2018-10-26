@@ -1,12 +1,64 @@
 .map {
+  position: relative;
+
   line-height: 1.12;
   color: $color-gray-dark;
 }
 
+.map__coninner-inner {
+  padding-top: 55px;
+  padding-bottom: 50px;
+
+  @include inner;
+}
+
 .map__title {
+  margin: 0;
+  margin-bottom: 22px;
+
   font-weight: $font-weight-bold;
   font-size: 18px;
   line-height: 1.67;
   color: $color-black;
   text-transform: uppercase;
+}
+
+.map__image {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 720px);;
+  z-index: -10;
+}
+
+.map__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.map__container-contact {
+  position: relative;
+  z-index: 20;
+
+  box-sizing: border-box;
+  width: 320px;
+  padding: 50px;
+
+  background-color: $color-white;
+}
+
+.map__contact {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.map__phone {
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.map__button {
+  padding-right: 44px;
+  padding-left: 44px;
 }

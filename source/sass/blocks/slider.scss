@@ -1,14 +1,129 @@
-.slider__list {
-  @include reset-list;
+.slider {
+  padding-top: 70px;
+  padding-bottom: 80px;
+
   background-color: $color-gray;
 }
 
+.slider__container {
+  @include inner;
+}
+
+.slider__list {
+  width: 560px;
+
+  @include reset-list;
+}
+
 .slider__lead {
+  margin: 0;
+  margin-bottom: 25px;
+
   font-weight: $font-weight-medium;
   font-size: 55px;
   line-height: 1;
 }
 
 .slider__text {
-  color: $color-dark-blue
+  margin: 0;
+  margin-bottom: 40px;
+
+  color: $color-dark-blue;
+}
+
+.slider__button {
+  padding-right: 55px;
+  padding-left: 55px;
+}
+
+.slider__item {
+  display: none;
+}
+
+#slide-one:checked ~ .slider__list .slider__item:nth-child(1),
+#slide-two:checked ~ .slider__list .slider__item:nth-child(2),
+#slide-three:checked ~ .slider__list .slider__item:nth-child(3) {
+  display: block;
+}
+
+#slide-one:checked ~ .slider__controls .slider__controls-item:nth-child(1),
+#slide-two:checked ~ .slider__controls .slider__controls-item:nth-child(2),
+#slide-three:checked ~ .slider__controls .slider__controls-item:nth-child(3) {
+  &::after {
+    box-shadow:
+      inset 0 0 0 5px $color-white,
+      inset 0 0 0 7px $color-gray11,
+      inset 0 0 0 9px $color-white;
+  }
+}
+
+.slider__container {
+  position: relative;
+}
+
+.slider__toggle:checked ~ .slider__list .slider__item {
+  &::after {
+    content: "";
+    position: absolute;
+    top: -78px;
+    right: 22px;
+
+    width: 760px;
+    height: 431px;
+    background-repeat: no-repeat;
+  }
+}
+
+#slide-one:checked ~ .slider__list .slider__item:nth-child(1) {
+  &::after {
+    background-image: url("../img/nerds-index-slide1.png");
+  }
+}
+
+#slide-two:checked ~ .slider__list .slider__item:nth-child(2) {
+  &::after {
+    background-image: url("../img/nerds-index-slide2.png");
+  }
+}
+
+#slide-three:checked ~ .slider__list .slider__item:nth-child(3) {
+  &::after {
+    background-image: url("../img/nerds-index-slide3.png");
+  }
+}
+
+.slider__controls {
+  font-size: 0;
+  position: absolute;
+  left: 50%;
+  top: 232px;
+  z-index: 10;
+
+  transform: translateX(-50%);
+}
+
+.slider__controls-item {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+
+  border-radius: 50%;
+}
+
+
+.slider__controls-item {
+  &::after {
+    content: "";
+    display: inline-block;
+    top: 8px;
+    left: 8px;
+
+    width: 18px;
+    height: 18px;
+    background-color: $color-white;
+
+
+    border-radius: 50%;
+  }
 }

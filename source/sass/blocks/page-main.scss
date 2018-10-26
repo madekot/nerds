@@ -1,12 +1,63 @@
-.page-main__title {
-  font-size: 55px;
-  line-height: 1;
-  font-weight: $font-weight-medium;
+.page-main__slider {
+  margin-bottom: 80px;
 }
 
-.page-main__wrapper {
+.page-main__services {
+  @include inner;
+
+  margin-bottom: 80px;
+}
+
+.page-main__info {
+  @include inner;
+  position: relative;
+
+  margin-bottom: 74px;
+  padding-top: 40px;
+}
+
+.page-main__inner {
+  @include inner;
+}
+
+.page-main__brends {
+  @include inner;
+}
+
+.page-main__title {
+  width: 840px;
+  margin: 0 auto;
+
+  font-weight: $font-weight-medium;
+  font-size: 55px;
+  line-height: 1;
+  text-align: center;
+}
+
+.page-main__container-title {
   width: 100%;
-  &--gray {
-    background-color: $color-gray;
-  }
+  margin-bottom: 53px;
+  padding-top: 70px;
+  padding-bottom: 110px;
+
+  background-color: $color-gray;
+}
+
+.page-main__container-flex {
+  display: flex;
+  margin-bottom: 57px;
+}
+
+.page-main__filter {
+  width: 300px;
+  margin-right: auto;
+}
+
+.page-main__products {
+  width: 760px;
+  padding-top: 3px;
+}
+
+.page-main__sorting {
+  margin-bottom: 43px;
 }

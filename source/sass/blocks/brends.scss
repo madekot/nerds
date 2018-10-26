@@ -1,3 +1,41 @@
 .brends__list {
+  display: flex;
+  justify-content: space-between;
+
   @include reset-list;
+}
+
+.brends-list__item {
+  position: relative;
+
+  width: 260px;
+  height: 184px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 26px);
+    right: -20px;
+
+    width: 2px;
+    height: 52px;
+
+    background-color: $color-gray;
+  }
+
+  &:last-child::after {
+    content: none;
+  }
+}
+
+.brends-list__link {
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
