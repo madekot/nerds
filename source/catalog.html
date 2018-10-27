@@ -375,5 +375,41 @@
             </div>
           </section>
         </footer>
+        <section class="modal modal__contact visually-hidden">
+          <div class="modal__container">
+            <h2 class="modal__title">Напишите нам</h2>
+            <button class="modal__button-close button" type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <form action="" method="post" class="modal__form modal-form">
+              <div class="modal-form__container-contact">
+                <p class="modal-form__contact">
+                  <label for="name" class="modal-form__text">Ваше имя:</label>
+                  <input
+                    type="text"
+                    class="modal-form__input"
+                    placeholder="Имя Фамилия"
+                    id="name"></p>
+                <p class="modal-form__contact">
+                  <label for="email" class="modal-form__text">Ваш e-mail:</label>
+                  <input
+                    type="text"
+                    class="modal-form__input"
+                    placeholder="email@example.com"
+                    id="email"></p>
+              </div>
+              <p class="modal-form__container-message">
+                <label for="text-modal" class="modal-form__text">Текст письма:</label>
+                <textarea
+                  name="text-modal"
+                  id="text-modal"
+                  class="modal-form__input modal-form__input--textarea"
+                  placeholder="В свободной форме"></textarea>
+              </p>
+              <button class="modal-form__button button" type="submit">Отправить</button>
+            </form>
+          </div>
+        </section>
+        <script src="js/sсript.js"></script>
       </body>
     </html>
