@@ -25,6 +25,7 @@ try {
 openPopup.addEventListener('click', function(evt) {
   evt.preventDefault();
   modalPopup.classList.remove('visually-hidden');
+  modalPopup.classList.add('animation--show');
   if (storageName && storageEmail) {
     namePopup.value = storageName;
     emailPopup.value = storageEmail;
@@ -36,12 +37,15 @@ openPopup.addEventListener('click', function(evt) {
 
 closePopup.addEventListener('click', function(evt) {
   evt.preventDefault();
+  modalPopup.classList.remove('animation--show');
+  modalPopup.classList.remove('animation--error')
   modalPopup.classList.add('visually-hidden');
 });
 
 formPopup.addEventListener('submit', function(evt) {
   if (!namePopup.value || !emailPopup.value) {
     evt.preventDefault();
+    modalPopup.classList.add('animation--error')
     console.log('Нужно ввести пароль');
   } else if (isStorageSupport) {
     evt.preventDefault();
@@ -55,6 +59,8 @@ window.addEventListener('keydown', function(evt) {
     if (!modalPopup.classList.contains('visually-hidden')) {
       evt.preventDefault();
       modalPopup.classList.add('visually-hidden');
+      modalPopup.classList.remove('animation--show');
+      modalPopup.classList.remove('animation--error')
     };
   };
 })
