@@ -10,8 +10,17 @@ var namePopup = formPopup.querySelector('#name');
 var emailPopup = formPopup.querySelector('#email');
 var comentPopup = formPopup.querySelector('#text-modal');
 
+var isStorageSupport = true;
+var storage = '';
+
 var storageName = localStorage.getItem('name');
 var storageEmail = localStorage.getItem('email');
+
+try {
+  storage = storageName;
+} catch (err) {
+  isStorageSupport = false;
+}
 
 openPopup.addEventListener('click', function(evt) {
   evt.preventDefault();
@@ -34,9 +43,18 @@ formPopup.addEventListener('submit', function(evt) {
   if (!namePopup.value || !emailPopup.value) {
     evt.preventDefault();
     console.log('Нужно ввести пароль');
-  } else {
+  } else if (isStorageSupport) {
     evt.preventDefault();
     localStorage.setItem('name', namePopup.value);
     localStorage.setItem('email', emailPopup.value);
   }
+})
+
+window.addEventListener('keydown', function(evt) {
+  if (evt.keyCode === 27) {
+    if (!modalPopup.classList.contains('visually-hidden')) {
+      evt.preventDefault();
+      modalPopup.classList.add('visually-hidden');
+    };
+  };
 })
