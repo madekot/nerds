@@ -13,14 +13,17 @@ var comentPopup = formPopup.querySelector('#text-modal');
 var isStorageSupport = true;
 var storage = '';
 
-var storageName = localStorage.getItem('name');
-var storageEmail = localStorage.getItem('email');
-
 try {
-  storage = storageName;
+  storage = localStorage.getItem('name');
+  storage = localStorage.getItem('email');
 } catch (err) {
   isStorageSupport = false;
 }
+
+if (isStorageSupport) {
+  var storageName = localStorage.getItem('name');
+  var storageEmail = localStorage.getItem('email');
+};
 
 openPopup.addEventListener('click', function(evt) {
   evt.preventDefault();
