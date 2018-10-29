@@ -40,7 +40,7 @@
       width: 28px;
       height: 23px;
 
-      background-image: url("/img/checkbox-off.svg");
+      background-image: url("../img/checkbox-off.svg");
       background-repeat: no-repeat;
     }
   }
@@ -79,7 +79,7 @@
 }
 
 .filter__input-checkbox:checked + .filter__label--checkbox::after {
-  background-image: url("/img/checkbox-on.svg");
+  background-image: url("../img/checkbox-on.svg");
 }
 
 .filter__range {
