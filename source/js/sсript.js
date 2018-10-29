@@ -6,7 +6,7 @@ var closePopup = modalPopup.querySelector('.modal__button-close');
 
 var formPopup = modalPopup.querySelector('.modal-form');
 var formSubmitPopup = formPopup.querySelector('[type = submit]');
-var namePopup = formPopup.querySelector('#name');
+var namePopup = formPopup.querySelector('#modalForm-name');
 var emailPopup = formPopup.querySelector('#email');
 var comentPopup = formPopup.querySelector('#text-modal');
 
@@ -18,7 +18,7 @@ try {
   storage = localStorage.getItem('email');
 } catch (err) {
   isStorageSupport = false;
-}
+};
 
 if (isStorageSupport) {
   var storageName = localStorage.getItem('name');
@@ -29,7 +29,7 @@ openPopup.addEventListener('click', function(evt) {
   evt.preventDefault();
   modalPopup.classList.remove('visually-hidden');
   modalPopup.classList.add('animation--show');
-  if (storageName && storageEmail) {
+  if (storageName !== null && storageEmail !== null) {
     namePopup.value = storageName;
     emailPopup.value = storageEmail;
     comentPopup.focus();
@@ -54,6 +54,7 @@ formPopup.addEventListener('submit', function(evt) {
     evt.preventDefault();
     localStorage.setItem('name', namePopup.value);
     localStorage.setItem('email', emailPopup.value);
+    comentPopup.focus();
   }
 })
 
