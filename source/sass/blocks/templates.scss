@@ -11,14 +11,11 @@
   position: relative;
 
   display: flex;
+  flex-direction: column;
   width: 360px;
   min-height: 580px;
   margin-right: 40px;
   margin-bottom: 33px;
-  padding-top: 36px;
-
-  background: linear-gradient(to bottom, $color-gray5 40px, transparent 40px,);
-  border-radius: 3px 3px 0 0;
 
   &:nth-child(2n) {
     margin-right: 0;
@@ -43,14 +40,29 @@
     46px 0 0 0 $color-white;
   }
 
+  &::before {
+    content: "";
+
+    display: block;
+    width: 100%;
+    height: 40px;
+
+    background-color: $color-gray5;
+    border-radius: 3px 3px 0 0;
+  }
+
+
   &:hover .templates__container {
     visibility: visible;
   }
 
   &:hover {
-    background: linear-gradient(to bottom, $color-black3 40px, transparent 40px,);
     box-shadow: inset 0 0 0 2px rgba(77, 77, 77, 0.1),
     0 6px 15px 5px rgba(0, 1, 1, 0.25);
+  }
+
+  &:hover::before {
+    background-color: $color-gray10;
   }
 
   &:hover .templates__box {
@@ -59,18 +71,16 @@
 }
 
 .templates__box {
-  display: flex;
-  flex-direction: column;
   width: 100%;
+  height: 576px;
 
   box-shadow: inset 0 0 0 2px $color-gray6;
 }
 
 .templates__image {
   position: absolute;
-  bottom: 0;
-  left: 0;
   z-index: -10;
+  bottom: 0;
 }
 
 .templates__title {
@@ -94,7 +104,9 @@
 }
 
 .templates__container {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   z-index: 10;
 
   display: flex;
@@ -102,7 +114,6 @@
   align-items: center;
   box-sizing: border-box;
   min-height: 231px;
-  margin-top: auto;
   padding-top: 27px;
   padding-right: 30px;
   padding-bottom: 30px;
