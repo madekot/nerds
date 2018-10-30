@@ -66,7 +66,11 @@
   }
 }
 
-.filter .filter__container .filter__label--disabled {
+.filter__input-radio:checked + .filter__label--radio::after {
+  background-color: $color-gray10;
+}
+
+.filter__input-radio:disabled + .filter__label {
   color: rgba(40, 49, 54, 0.3);
 
   &::after {
@@ -74,12 +78,16 @@
   }
 }
 
-.filter__input-radio:checked + .filter__label--radio::after {
-  background-color: $color-gray10;
-}
-
 .filter__input-checkbox:checked + .filter__label--checkbox::after {
   background-image: url("../img/checkbox-on.svg");
+}
+
+.filter__input-checkbox:disabled + .filter__label {
+  color: rgba(40, 49, 54, 0.3);
+
+  &::after {
+    opacity: 0.1;
+  }
 }
 
 .filter__range {
