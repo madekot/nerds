@@ -5,7 +5,6 @@ var openPopup = document.querySelector('.map__button');
 var closePopup = modalPopup.querySelector('.modal__button-close');
 
 var formPopup = modalPopup.querySelector('.modal-form');
-var formSubmitPopup = formPopup.querySelector('[type = submit]');
 var namePopup = formPopup.querySelector('#modalForm-name');
 var emailPopup = formPopup.querySelector('#email');
 var comentPopup = formPopup.querySelector('#text-modal');
@@ -54,7 +53,6 @@ formPopup.addEventListener('submit', function(evt) {
     evt.preventDefault();
     localStorage.setItem('name', namePopup.value);
     localStorage.setItem('email', emailPopup.value);
-    comentPopup.focus();
   }
 })
 
