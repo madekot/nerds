@@ -40,6 +40,11 @@
   opacity: 1;
 }
 
+.sorting__text:active {
+  opacity: 1;
+  color: $color-black;
+}
+
 .sorting__list-value {
   position: relative;
 
@@ -74,4 +79,8 @@
 .sorting__input-value:checked + .sorting__text-value::before {
   border: 6px solid transparent;
   border-top: 11px solid $color-black2;
+}
+
+.sorting__input-value:active + .sorting__text-value::before {
+  border-top: 11px solid $color-black;
 }
