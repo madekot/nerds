@@ -47,18 +47,36 @@
 
   background-color: $color-white;
 
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: $color-red;
+  }
+
+  &:active {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &:active::after,
+  &:active::before {
+    background-color: #ffeeee;
+  }
+
   &::before {
     content: "";
     position: absolute;
     top: 12px;
     right: 25px;
 
-    width: 3px;
+    width: 4px;
     height: 28px;
 
-    background-color: red;
+    background-color: #fecccd;
     transform: rotate(45deg);
-    opacity: 0.2;
   }
 
   &::after {
@@ -68,10 +86,9 @@
     right: 12px;
 
     width: 28px;
-    height: 3px;
+    height: 4px;
 
-    background-color: red;
+    background-color: #fecccd;
     transform: rotate(45deg);
-    opacity: 0.2;
   }
 }
