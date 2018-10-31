@@ -64,6 +64,14 @@
   &:hover .filter__label::after {
     opacity: 1;
   }
+
+  &:hover .filter__label--checkbox::after {
+    background-image: url("../img/checkbox-off--hover-focus.svg");
+  }
+
+  &:hover .filter__input-checkbox:checked + .filter__label--checkbox::after {
+    background-image: url("../img/checkbox-on--hover-focus.svg");
+  }
 }
 
 .filter__input-radio:checked + .filter__label--radio::after {
