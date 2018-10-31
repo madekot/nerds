@@ -15,6 +15,10 @@
   border: none;
   border-radius: 3px;
 
+  &:focus {
+    background-color: $color-red2;
+  }
+
   &:hover {
     background-color: $color-red2;
     transition-duration: $speed-animation;
@@ -34,6 +38,10 @@
   &--green {
     background-color: $color-green;
 
+    &:focus {
+      background-color: $color-green2;
+    }
+
     &:hover {
       background-color: $color-green2;
     }
@@ -50,6 +58,10 @@
       background-color: $color-yellow2;
     }
 
+    &:focus {
+      background-color: $color-yellow2;
+    }
+
     &:active {
       background-color: $color-yellow3;
     }
@@ -61,6 +73,10 @@
     background-color: $color-gray;
 
     &:hover {
+      background-color: $color-gray8;
+    }
+
+    &:focus {
       background-color: $color-gray8;
     }
 

@@ -32,8 +32,13 @@
   padding-right: 24px;
   padding-bottom: 14px;
   padding-left: 45px;
+  outline-style: none;
 
   @include inherin-link;
+
+  &:focus {
+    color: $color-red;
+  }
 
   &:hover {
     color: $color-red;
