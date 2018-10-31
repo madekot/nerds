@@ -16,8 +16,11 @@
   font-size: 14px;
   line-height: 1.286;
   text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
 
-  opacity: 0.3;
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
 }
 
 .sorting__list-type {
@@ -73,6 +76,14 @@
     right: 0;
 
     transform: rotate(180deg);
+  }
+
+  &--min:hover::before {
+    border-top-color: $color-black2;
+  }
+
+  &--max:hover::before {
+    border-top-color: $color-black2;
   }
 }
 
