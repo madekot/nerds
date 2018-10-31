@@ -5,7 +5,7 @@
   @include reset-list;
 }
 
-.brends-list__item {
+.brends__item {
   position: relative;
 
   width: 260px;
@@ -28,7 +28,7 @@
   }
 }
 
-.brends-list__link {
+.brends__link {
   opacity: 0.2;
 
   &:hover {
