@@ -1,7 +1,4 @@
 .slider {
-  padding-top: 70px;
-  padding-bottom: 80px;
-
   background-color: $color-gray;
 }
 
@@ -9,13 +6,21 @@
   @include inner;
 }
 
-.slider__list {
-  width: 560px;
+.slider__container-slides {
+  overflow: hidden;
+  height: 420px;
+}
 
+.slider__list {
+  display: flex;
   @include reset-list;
+
+  transition-duration: $speed-animation;
+  transition-property: transform;
 }
 
 .slider__lead {
+  width: 560px;
   margin: 0;
   margin-bottom: 25px;
 
@@ -37,13 +42,37 @@
 }
 
 .slider__item {
-  display: none;
+  flex-shrink: 0;
+  width: 1161px;
+  padding-top: 70px;
+  padding-bottom: 80px;
+
+  background-repeat: no-repeat;
+  background-position: 397px -8px;
 }
 
-#slide-one:checked ~ .slider__list .slider__item:nth-child(1),
-#slide-two:checked ~ .slider__list .slider__item:nth-child(2),
-#slide-three:checked ~ .slider__list .slider__item:nth-child(3) {
-  display: block;
+.slider__item:nth-child(1) {
+  background-image: url("../img/nerds-index-slide1.png");
+};
+
+.slider__item:nth-child(2) {
+  background-image: url("../img/nerds-index-slide2.png");
+};
+
+.slider__item:nth-child(3) {
+  background-image: url("../img/nerds-index-slide3.png");
+};
+
+#slide-one:checked ~ .slider__container-slides .slider__list{
+  transform: translateX(0px);
+}
+
+#slide-two:checked ~ .slider__container-slides .slider__list{
+  transform: translateX(-1160px);
+}
+
+#slide-three:checked ~ .slider__container-slides .slider__list{
+  transform: translateX(-2320px);
 }
 
 #slide-one:checked ~ .slider__controls .slider__controls-item:nth-child(1),
@@ -61,42 +90,11 @@
   position: relative;
 }
 
-.slider__toggle:checked ~ .slider__list .slider__item {
-  &::after {
-    content: "";
-    position: absolute;
-    top: -78px;
-    right: 22px;
-
-    width: 760px;
-    height: 431px;
-    background-repeat: no-repeat;
-  }
-}
-
-#slide-one:checked ~ .slider__list .slider__item:nth-child(1) {
-  &::after {
-    background-image: url("../img/nerds-index-slide1.png");
-  }
-}
-
-#slide-two:checked ~ .slider__list .slider__item:nth-child(2) {
-  &::after {
-    background-image: url("../img/nerds-index-slide2.png");
-  }
-}
-
-#slide-three:checked ~ .slider__list .slider__item:nth-child(3) {
-  &::after {
-    background-image: url("../img/nerds-index-slide3.png");
-  }
-}
-
 .slider__controls {
   font-size: 0;
   position: absolute;
   left: 50%;
-  top: 232px;
+  top: 303px;
   z-index: 10;
 
   transform: translateX(-50%);
@@ -111,7 +109,6 @@
   border-radius: 50%;
 }
 
-
 .slider__controls-item {
   &::after {
     content: "";
@@ -122,7 +119,6 @@
     width: 18px;
     height: 18px;
     background-color: $color-white;
-
 
     border-radius: 50%;
   }
