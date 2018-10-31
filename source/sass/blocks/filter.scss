@@ -24,8 +24,7 @@
 
       background-color: $color-white;
       border-radius: 50%;
-      opacity: 0.4;
-      box-shadow: inset 0 0 0 4px $color-gray10,
+      box-shadow: inset 0 0 0 4px rgba(77, 77, 77, 0.4),
       inset 0 0 0 8px $color-white;
     }
   }
@@ -61,8 +60,13 @@
     color: $color-black;
   }
 
-  &:hover .filter__label::after {
-    opacity: 1;
+  &:hover .filter__label--radio::after {
+    box-shadow: inset 0 0 0 4px rgba(77, 77, 77, 1),
+    inset 0 0 0 8px $color-white;
+  }
+
+  &:hover .filter__input-radio:checked + .filter__label--radio::after {
+    background-color: rgba(77, 77, 77, 1);
   }
 
   &:hover .filter__label--checkbox::after {
@@ -75,7 +79,7 @@
 }
 
 .filter__input-radio:checked + .filter__label--radio::after {
-  background-color: $color-gray10;
+  background-color: rgba(77, 77, 77, 0.4);
 }
 
 .filter__input-radio:disabled + .filter__label {
@@ -86,8 +90,22 @@
   }
 }
 
+.filter__input-radio:focus + .filter__label{
+  &::after {
+    border-color: #663d15;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+}
+
 .filter__input-checkbox:checked + .filter__label--checkbox::after {
   background-image: url("../img/checkbox-on.svg");
+}
+
+.filter__input-checkbox:focus + .filter__label--checkbox::after {
+  border-color: #663d15;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .filter__input-checkbox:disabled + .filter__label {
