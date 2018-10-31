@@ -37,6 +37,8 @@
 
   &:hover {
     color: $color-red;
+    transition-duration: 0.6s;
+    transition-property: color;
   }
 
   &:active {

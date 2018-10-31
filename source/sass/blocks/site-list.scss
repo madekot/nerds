@@ -35,6 +35,8 @@
 
   &:hover {
     color: $color-red;
+    transition-duration: $speed-animation;
+    transition-property: color;
   }
 
   &:active {

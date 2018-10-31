@@ -1,9 +1,15 @@
 .logo {
   &:hover {
     opacity: 0.8;
+
+    transition-duration: $speed-animation;
+    transition-property: opacity;
   }
 
   &:active {
     opacity: 0.3;
+
+    transition-duration: $speed-animation;
+    transition-property: opacity;
   }
 }
