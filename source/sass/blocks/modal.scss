@@ -47,7 +47,8 @@
 
   background-color: $color-white;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: transparent;
   }
 
