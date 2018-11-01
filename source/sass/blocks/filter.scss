@@ -40,6 +40,7 @@
       height: 23px;
 
       background-image: url("../img/checkbox-off.svg");
+      opacity: 0.4;
       background-repeat: no-repeat;
     }
   }
@@ -58,23 +59,31 @@
 
   &:hover .filter__label {
     color: $color-black;
+    transition: $speed-animation;
+    transition-property: color;
   }
 
   &:hover .filter__label--radio::after {
     box-shadow: inset 0 0 0 4px rgba(77, 77, 77, 1),
     inset 0 0 0 8px $color-white;
+    transition: $speed-animation;
+    transition-property: box-shadow;
   }
 
   &:hover .filter__input-radio:checked + .filter__label--radio::after {
     background-color: rgba(77, 77, 77, 1);
+    transition: $speed-animation;
+    transition-property: background-color;
   }
 
   &:hover .filter__label--checkbox::after {
-    background-image: url("../img/checkbox-off--hover-focus.svg");
+    background-image: url("../img/checkbox-off.svg");
+    opacity: 1;
   }
 
   &:hover .filter__input-checkbox:checked + .filter__label--checkbox::after {
-    background-image: url("../img/checkbox-on--hover-focus.svg");
+    background-image: url("../img/checkbox-on.svg");
+    opacity: 1;
   }
 }
 
@@ -100,19 +109,13 @@
   }
 }
 
-
-
 .filter__input-checkbox {
   &:checked + .filter__label--checkbox::after {
     background-image: url("../img/checkbox-on.svg");
   }
 
   &:focus + .filter__label--checkbox::after {
-    background-image: url("../img/checkbox-off--hover-focus.svg");
-  }
-
-  &:checked:focus + .filter__label--checkbox::after {
-    background-image: url("../img/checkbox-on--hover-focus.svg");
+    opacity: 1;
   }
 
   &:disabled + .filter__label {
