@@ -79,11 +79,15 @@
   &:hover .filter__label--checkbox::after {
     background-image: url("../img/checkbox-off.svg");
     opacity: 1;
+    transition: $speed-animation;
+    transition-property: opacity;
   }
 
   &:hover .filter__input-checkbox:checked + .filter__label--checkbox::after {
     background-image: url("../img/checkbox-on.svg");
     opacity: 1;
+    transition: $speed-animation;
+    transition-property: opacity;
   }
 }
 

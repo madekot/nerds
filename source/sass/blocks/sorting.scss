@@ -20,6 +20,8 @@
 
   &:hover {
     color: rgba(0, 0, 0, 0.6);
+    transition-duration: $speed-animation;
+    transition-property: color;
   }
 }
 
@@ -80,10 +82,16 @@
 
   &--min:hover::before {
     border-top-color: $color-black2;
+
+    transition-duration: $speed-animation;
+    transition-property: border-color;
   }
 
   &--max:hover::before {
     border-top-color: $color-black2;
+
+    transition-duration: $speed-animation;
+    transition-property: border-color;
   }
 }
 
