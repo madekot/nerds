@@ -16,8 +16,13 @@
   font-size: 14px;
   line-height: 1.286;
   text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
 
-  opacity: 0.3;
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+    transition-duration: $speed-animation;
+    transition-property: color;
+  }
 }
 
 .sorting__list-type {
@@ -38,6 +43,11 @@
   color: $color-black;
 
   opacity: 1;
+}
+
+.sorting__text:active {
+  opacity: 1;
+  color: $color-black;
 }
 
 .sorting__list-value {
@@ -69,9 +79,27 @@
 
     transform: rotate(180deg);
   }
+
+  &--min:hover::before {
+    border-top-color: $color-black2;
+
+    transition-duration: $speed-animation;
+    transition-property: border-color;
+  }
+
+  &--max:hover::before {
+    border-top-color: $color-black2;
+
+    transition-duration: $speed-animation;
+    transition-property: border-color;
+  }
 }
 
 .sorting__input-value:checked + .sorting__text-value::before {
   border: 6px solid transparent;
   border-top: 11px solid $color-black2;
+}
+
+.sorting__input-value:active + .sorting__text-value::before {
+  border-top: 11px solid $color-black;
 }

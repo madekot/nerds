@@ -30,6 +30,9 @@
 
   &:active .social__image {
     opacity: 0.3;
+
+    transition-duration: $speed-animation;
+    transition-property: opacity;
   }
 }
 

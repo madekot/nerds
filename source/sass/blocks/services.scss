@@ -28,15 +28,15 @@
   }
 
   &--image-saits::before {
-    background-image: url("/img/illustration-1.jpg");
+    background-image: url("../img/illustration-1.jpg");
   }
 
   &--image-apps::before {
-    background-image: url("/img/illustration-2.jpg");
+    background-image: url("../img/illustration-2.jpg");
   }
 
   &--image-presentations::before {
-    background-image: url("/img/illustration-3.jpg");
+    background-image: url("../img/illustration-3.jpg");
   }
 }
 

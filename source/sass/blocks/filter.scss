@@ -24,9 +24,8 @@
 
       background-color: $color-white;
       border-radius: 50%;
-      opacity: 0.4;
-      box-shadow: inset 0 0 0 4px $color-gray10,
-      inset 0 0 0 8px $color-white;
+      box-shadow: inset 0 0 0 4px rgba(77, 77, 77, 0.4),
+      inset 0 0 0 14px $color-white;
     }
   }
 
@@ -40,7 +39,8 @@
       width: 28px;
       height: 23px;
 
-      background-image: url("/img/checkbox-off.svg");
+      background-image: url("../img/checkbox-off.svg");
+      opacity: 0.4;
       background-repeat: no-repeat;
     }
   }
@@ -59,27 +59,76 @@
 
   &:hover .filter__label {
     color: $color-black;
+    transition: $speed-animation;
+    transition-property: color;
   }
 
-  &:hover .filter__label::after {
+  &:hover .filter__label--radio::after {
+    box-shadow: inset 0 0 0 4px rgba(77, 77, 77, 1),
+    inset 0 0 0 14px $color-white;
+
+    transition: $speed-animation;
+    transition-property: box-shadow;
+  }
+
+  &:hover .filter__input-radio:checked + .filter__label--radio::after {
+    background-color: rgba(77, 77, 77, 1);
+
+    box-shadow: inset 0 0 0 4px rgba(77, 77, 77, 1),
+    inset 0 0 0 8px $color-white;
+
+    transition: $speed-animation;
+    transition-property:box-shadow, background-color;
+  }
+
+  &:hover .filter__label--checkbox::after {
+    background-image: url("../img/checkbox-off.svg");
     opacity: 1;
+    transition: $speed-animation;
+    transition-property: opacity;
   }
 }
 
-.filter .filter__container .filter__label--disabled {
-  color: rgba(40, 49, 54, 0.3);
+.filter__input-radio {
+  &:checked + .filter__label--radio::after {
+    background-color: rgba(77, 77, 77, 0.4);
+    box-shadow: inset 0 0 0 4px rgba(77, 77, 77, 0.4),
+    inset 0 0 0 8px $color-white;
 
-  &::after {
+    transition-duration: $speed-animation;
+    transition-property: box-shadow;
+  }
+
+  &:disabled + .filter__label {
+    color: rgba(40, 49, 54, 0.3);
+  }
+  &:disabled + .filter__label::after {
     opacity: 0.1;
   }
+
+  &:focus + .filter__label::after{
+    background-color: rgba(77, 77, 77, 1);
+    box-shadow: inset 0 0 0 4px rgba(77, 77, 77, 1),
+    inset 0 0 0 8px $color-white;
+  }
 }
 
-.filter__input-radio:checked + .filter__label--radio::after {
-  background-color: $color-gray10;
-}
+.filter__input-checkbox {
+  &:checked + .filter__label--checkbox::after {
+    background-image: url("../img/checkbox-on.svg");
+  }
 
-.filter__input-checkbox:checked + .filter__label--checkbox::after {
-  background-image: url("/img/checkbox-on.svg");
+  &:focus + .filter__label--checkbox::after {
+    opacity: 1;
+  }
+
+  &:disabled + .filter__label {
+    color: rgba(40, 49, 54, 0.3);
+
+    &::after {
+      opacity: 0.1;
+    }
+  }
 }
 
 .filter__range {

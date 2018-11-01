@@ -32,18 +32,54 @@
   box-sizing: border-box;
   width: 360px;
   height: 50px;
-  padding-top: 21px;
-  padding-right: 15px;
-  padding-bottom: 21px;
   padding-left: 15px;
+  outline: none;
+  color: rgba(68, 68, 68, 0.5);
 
   font: inherit;
 
   border: 2px solid $color-gray2;
   border-radius: 3px;
 
+  &:hover {
+    border-color: $color-gray12;
+
+    transition-duration: $speed-animation;
+    transition-property: border-color;
+  }
+
+  &:focus {
+    border-color: $color-black;
+    color: rgba(68, 68, 68, 1);
+  }
+
   &::placeholder {
     color: $color-gray-darken;
+
+    transition-duration: $speed-animation;
+    transition-property: color;
+  }
+
+  &--invalid {
+    border-color: $color-red2;
+    color: $color-red2;
+
+    transition-duration: $speed-animation;
+    transition-property: border-color, color;
+  }
+
+  &--invalid::placeholder {
+    color: $color-red2;
+
+    transition-duration: $speed-animation;
+    transition-property: color;
+  }
+
+  &--invalid:hover::placeholder {
+    color: $color-gray12;
+
+    transition-duration: $speed-animation;
+    transition-property: color;
   }
 
   &--textarea {

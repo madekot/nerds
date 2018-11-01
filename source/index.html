@@ -20,7 +20,7 @@
         <div class="main-nav__site-list site-list">
           <ul class="site-list__list">
             <li class="site-list__item">
-              <a href="#" class="site-list__link">Студия</a>
+              <a href="#" class="site-list__link site-list__link--current">Студия</a>
             </li>
             <li class="site-list__item">
               <a href="#" class="site-list__link">Клиенты</a>
@@ -46,37 +46,39 @@
       <section class="page-main__slider slider">
         <div class="slider__container">
           <h2 class="visually-hidden">Наши услуги в слайдах</h2>
-          <input class="slider__toggle visually-hidden" name="slider__toggle" type="radio" checked id="slide-one"></input>
-          <input class="slider__toggle visually-hidden" name="slider__toggle" type="radio" id="slide-two"></input>
-          <input class="slider__toggle visually-hidden" name="slider__toggle" type="radio" id="slide-three"></input>
+          <input class="slider__toggle visually-hidden" name="slider__toggle" type="radio" checked id="slide-one">
+          <input class="slider__toggle visually-hidden" name="slider__toggle" type="radio" id="slide-two">
+          <input class="slider__toggle visually-hidden" name="slider__toggle" type="radio" id="slide-three">
           <div class="slider__controls">
             <label class="slider__controls-item" for="slide-one">Первый</label>
             <label class="slider__controls-item" for="slide-two">Второй</label>
             <label class="slider__controls-item" for="slide-three">Третий</label>
           </div>
-          <ul class="slider__list">
-            <li class="slider__item">
-              <p class="slider__lead">Долго, дорого, скрупулезно.</p>
-              <p class="slider__text">Математически выверенный дизайн
-                <br>для вашего сайта или мобильного приложения.</p>
-              <a href="#" class="slider__button button">Узнать больше</a>
-            </li>
-            <li class="slider__item">
-              <p class="slider__lead">Любим математику как никто другой</p>
-              <p class="slider__text">Никакого креатива, только математические
-                <br>формулы для расчета идеальных пропорций.
-              </p>
-              <a href="#" class="slider__button button">Узнать больше</a>
-            </li>
-            <li class="slider__item">
-              <p class="slider__lead">Только ночь,
-                <br>только хардкор</p>
-              <p class="slider__text">Работать днем, как все? Мы против этого.
-                <br>Ближе к полуночи работа только начинается.
-              </p>
-              <a href="#" class="slider__button button">Узнать больше</a>
-            </li>
-          </ul>
+          <div class="slider__container-slides">
+            <ul class="slider__list">
+              <li class="slider__item">
+                <p class="slider__lead">Долго, дорого, скрупулезно.</p>
+                <p class="slider__text">Математически выверенный дизайн
+                  <br>для вашего сайта или мобильного приложения.</p>
+                <a href="#" class="slider__button button">Узнать больше</a>
+              </li>
+              <li class="slider__item">
+                <p class="slider__lead">Любим математику как никто другой</p>
+                <p class="slider__text">Никакого креатива, только математические
+                  <br>формулы для расчета идеальных пропорций.
+                </p>
+                <a href="#" class="slider__button button">Узнать больше</a>
+              </li>
+              <li class="slider__item">
+                <p class="slider__lead">Только ночь,
+                  <br>только хардкор</p>
+                <p class="slider__text">Работать днем, как все? Мы против этого.
+                  <br>Ближе к полуночи работа только начинается.
+                </p>
+                <a href="#" class="slider__button button">Узнать больше</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="page-main__services services">
@@ -117,7 +119,7 @@
           </div>
         </div>
         <div class="info__container-table">
-          <div class="info__logo logo">
+          <div class="info__logo">
             <img
               src="img/nerds-illustration.jpg"
               alt="Логотип нёрдс"
@@ -141,33 +143,34 @@
         </div>
       </div>
       <section class="page-main__brends brends gray-line gray-line--bottom">
+        <h2 class="visually-hidden">Наши заказчики</h2>
         <ul class="brends__list">
-          <li class="brends-list__item">
-            <a href="#" class="brends-list__link">
+          <li class="brends__item">
+            <a href="#" class="brends__link">
               <img
                 class="brends__image brends__image--html-academy"
-                src="img\logo-1.png"
+                src="img/logo-1.png"
                 alt="HTML academy">
             </a>
           </li>
-          <li class="brends-list__item">
-            <a href="#" class="brends-list__link">
+          <li class="brends__item">
+            <a href="#" class="brends__link">
               <img
                 class="brends__image brends__image--borodinski"
-                src="img\logo-2.png"
+                src="img/logo-2.png"
                 alt="Borodinski">
             </a>
           </li>
-          <li class="brends-list__item">
-            <a href="#" class="brends-list__link">
-              <img class="brends__image brends__image--pink" src="img\logo-3.png" alt="Pink">
+          <li class="brends__item">
+            <a href="#" class="brends__link">
+              <img class="brends__image brends__image--pink" src="img/logo-3.png" alt="Pink">
             </a>
           </li>
-          <li class="brends-list__item">
-            <a href="#" class="brends-list__link">
+          <li class="brends__item">
+            <a href="#" class="brends__link">
               <img
                 class="brends__image brends__image--mishka"
-                src="img\logo-4.png"
+                src="img/logo-4.png"
                 alt="Mishka">
             </a>
           </li>
@@ -189,9 +192,6 @@
           <iframe
           class="map__iframe"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533168!2d30.32085871635206!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1540406320458"
-          width="100%"
-          height="100%"
-          frameborder="0"
           allowfullscreen="allowfullscreen">
           </iframe>
           <img
@@ -201,11 +201,12 @@
         </div>
       </section>
       <section class="page-footer__social social">
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="social__list">
           <li class="social__item">
             <a href="#" class="social__link button">
               <img
-                src="img\vk-icon.svg"
+                src="img/vk-icon.svg"
                 alt="ВКонтакте"
                 class="social__image social__image--vk">
               <span class="visually-hidden">ВКонтакте</span></a>
@@ -213,7 +214,7 @@
           <li class="social__item">
             <a href="#" class="social__link button">
               <img
-                src="img\fb-icon.svg"
+                src="img/fb-icon.svg"
                 alt="Facebook"
                 class="social__image social__image--facebook">
               <span class="visually-hidden">Facebook</span></a>
@@ -221,7 +222,7 @@
           <li class="social__item">
             <a href="#" class="social__link button">
               <img
-                src="img\insta-icon.svg"
+                src="img/insta-icon.svg"
                 alt="Instagram"
                 class="social__image social__image--instagram">
               <span class="visually-hidden">Instagram</span></a>
@@ -239,22 +240,24 @@
         <button class="modal__button-close button" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
-        <form action="" method="post" class="modal__form modal-form">
+        <form action="https://echo.htmlacademy.ru" method="post" class="modal__form modal-form">
           <div class="modal-form__container-contact">
             <p class="modal-form__contact">
-              <label for="name" class="modal-form__text">Ваше имя:</label>
+              <label for="modalForm-name" class="modal-form__text">Ваше имя:</label>
               <input
                 type="text"
                 class="modal-form__input"
                 placeholder="Имя Фамилия"
-                id="name"></p>
+                id="modalForm-name"
+                ></p>
             <p class="modal-form__contact">
               <label for="email" class="modal-form__text">Ваш e-mail:</label>
               <input
                 type="text"
                 class="modal-form__input"
                 placeholder="email@example.com"
-                id="email"></p>
+                id="email"
+                ></p>
           </div>
           <p class="modal-form__container-message">
             <label for="text-modal" class="modal-form__text">Текст письма:</label>
@@ -268,4 +271,6 @@
         </form>
       </div>
     </section>
+    <script src="js/sсript.js">
+    </script>
   </html>

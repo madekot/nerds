@@ -1,0 +1,43 @@
+.info-table__container {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+
+.info-table__row {
+  display: flex;
+  margin-bottom: 36px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.info-table__value {
+  display: block;
+  margin-right: 19px;
+
+  font-weight: $font-weight-bold;
+  font-size: 45px;
+  line-height: 0.223;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.info-table__field {
+  margin-right: 20px;
+
+  line-height: 1.125;
+  color: $color-dark-blue;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.info-table__value-span {
+  font-size: 25px;
+  vertical-align: top;
+}

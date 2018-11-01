@@ -5,7 +5,7 @@
   @include reset-list;
 }
 
-.brends-list__item {
+.brends__item {
   position: relative;
 
   width: 260px;
@@ -28,14 +28,23 @@
   }
 }
 
-.brends-list__link {
+.brends__link {
+  outline-style: none;
   opacity: 0.2;
 
   &:hover {
+    opacity: 1;
+    transition-duration: $speed-animation;
+    transition-property: opacity;
+  }
+
+  &:focus {
     opacity: 1;
   }
 
   &:active {
     opacity: 0.1;
+    transition-duration: $speed-animation;
+    transition-property: opacity;
   }
 }
