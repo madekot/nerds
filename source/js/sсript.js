@@ -32,17 +32,34 @@ var showPopapAnimation = function(className) {
   setTimeout(deleteClassAnimationShow, 1500);
 }
 
+var onModalPopupKeydown = function(evt) {
+  if (evt.keyCode === 27) {
+    closePopap();
+  }
+}
+
+var onFormPopupFieldInvalid = function(evt) {
+  var clickedElement = evt.target;
+  clickedElement.classList.add('modal-form__input--invalid');
+  showPopapAnimation('animation--error');
+}
+
 var openPopap = function() {
   modalPopup.classList.remove('visually-hidden');
+  showPopapAnimation('animation--show');
+  document.addEventListener('keydown', onModalPopupKeydown);
+  formPopup.addEventListener('invalid', onFormPopupFieldInvalid, true);
 }
+
 var closePopap = function() {
   modalPopup.classList.add('visually-hidden');
+  document.removeEventListener('keydown', onModalPopupKeydown);
+  formPopup.removeEventListener('invalid', onFormPopupFieldInvalid, true);
 }
 
 popupButtonOpen.addEventListener('click', function(evt) {
   evt.preventDefault();
   openPopap();
-  showPopapAnimation('animation--show');
 
   if (storageName !== null && storageEmail !== null) {
     namePopup.value = storageName;
@@ -65,23 +82,3 @@ formPopup.addEventListener('submit', function(evt) {
     localStorage.setItem('email', emailPopup.value);
   }
 })
-
-window.addEventListener('keydown', function(evt) {
-  if (evt.keyCode === 27) {
-    if (!modalPopup.classList.contains('visually-hidden')) {
-      evt.preventDefault();
-      closePopap();
-      showPopapAnimation('animation--show');
-    };
-  };
-});
-
-var invalidSubmitHandled = function(evt) {
-   console.log(evt);
-
-  var clickedElement = evt.target;
-  clickedElement.classList.add('modal-form__input--invalid');
-  showPopapAnimation('animation--error');
-}
-
-formPopup.addEventListener('invalid', invalidSubmitHandled, true);
