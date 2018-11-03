@@ -389,6 +389,7 @@
                     class="modal-form__input"
                     placeholder="Имя Фамилия"
                     id="modalForm-name"
+                    required
                     ></p>
                 <p class="modal-form__contact">
                   <label for="email" class="modal-form__text">Ваш e-mail:</label>
@@ -397,6 +398,7 @@
                     class="modal-form__input"
                     placeholder="email@example.com"
                     id="email"
+                    required
                     ></p>
               </div>
               <p class="modal-form__container-message">
@@ -405,7 +407,9 @@
                   name="text-modal"
                   id="text-modal"
                   class="modal-form__input modal-form__input--textarea"
-                  placeholder="В свободной форме"></textarea>
+                  placeholder="В свободной форме"
+                  required
+                  ></textarea>
               </p>
               <button class="modal-form__button button" type="submit">Отправить</button>
             </form>

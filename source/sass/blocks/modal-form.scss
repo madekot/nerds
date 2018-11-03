@@ -68,6 +68,15 @@
     transition-property: border-color, color;
   }
 
+  &--invalid:hover,
+  &--invalid:focus {
+    border-color: $color-red2;
+    color: $color-red2;
+
+    transition-duration: $speed-animation;
+    transition-property: border-color, color;
+  }
+
   &--invalid::placeholder {
     color: $color-red2;
 
@@ -76,7 +85,7 @@
   }
 
   &--invalid:hover::placeholder {
-    color: $color-gray12;
+    color: $color-red2;
 
     transition-duration: $speed-animation;
     transition-property: color;
