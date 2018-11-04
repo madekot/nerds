@@ -8,6 +8,7 @@ var modalPopup = document.querySelector('.modal');
 var popupButtonClose = modalPopup.querySelector('.modal__button-close');
 
 var formPopup = modalPopup.querySelector('.modal-form');
+var requaredFildsForm = formPopup.querySelectorAll('.modal-form__input:required');
 var namePopup = formPopup.querySelector('#modalForm-name');
 var emailPopup = formPopup.querySelector('#email');
 var comentPopup = formPopup.querySelector('#text-modal');
@@ -41,7 +42,7 @@ var readLocalStorage = function() {
   }
 }
 
-var onPopupButtonSubmitSubmit = function(evt) {
+var onNamePopupEmailPopupSubmit = function(evt) {
   evt.preventDefault();
   if (toCheckIsStorageSupport()) {
     localStorage.setItem('name', namePopup.value);
@@ -55,19 +56,18 @@ var onModalPopupKeydown = function(evt) {
   }
 }
 
-var onFormPopupInvalid = function(evt) {
+var onRequaredFildsFormInvalid = function(evt) {
   var clickedElement = evt.target;
   clickedElement.classList.add('modal-form__input--invalid');
   showPopapAnimation('animation--error');
 }
 
-var onPopupButtonSubmitClick = function() {
-  var inputsForm = formPopup.querySelectorAll('.modal-form__input');
-  for (var i = 0; i < inputsForm.length; i++) {
-    var input = inputsForm[i];
-    if (input.checkValidity() === true) {
-      if (input.classList.contains('modal-form__input--invalid')) {
-        input.classList.remove('modal-form__input--invalid');
+var onRequaredFildsFormClick = function() {
+  for (var i = 0; i < requaredFildsForm.length; i++) {
+    var requaredFild = requaredFildsForm[i];
+    if (requaredFild.checkValidity() === true) {
+      if (requaredFild.classList.contains('modal-form__input--invalid')) {
+        requaredFild.classList.remove('modal-form__input--invalid');
       }
     }
   }
@@ -91,7 +91,7 @@ var closePopap = function(evt) {
   evt.preventDefault();
   modalPopup.classList.add('visually-hidden');
   document.removeEventListener('keydown', onModalPopupKeydown);
-  formPopup.removeEventListener('invalid', onFormPopupInvalid, true);
+  formPopup.removeEventListener('invalid', onRequaredFildsFormInvalid, true);
 }
 
 popupButtonOpen.addEventListener('click', function(evt) {
@@ -99,9 +99,9 @@ popupButtonOpen.addEventListener('click', function(evt) {
   if (modalPopup.classList.contains('visually-hidden')) {
     openPopap(evt);
     readLocalStorage();
-    formPopup.addEventListener('invalid', onFormPopupInvalid, true);
-    formPopup.addEventListener('submit', onPopupButtonSubmitSubmit);
-    popupButtonSubmit.addEventListener('click', onPopupButtonSubmitClick);
+    formPopup.addEventListener('invalid', onRequaredFildsFormInvalid, true);
+    formPopup.addEventListener('submit', onNamePopupEmailPopupSubmit);
+    popupButtonSubmit.addEventListener('click', onRequaredFildsFormClick);
   }
 });
 
@@ -109,8 +109,8 @@ popupButtonClose.addEventListener('click', function(evt) {
   evt.preventDefault();
   if (!(modalPopup.classList.contains('visually-hidden'))) {
     closePopap(evt);
-    formPopup.removeEventListener('invalid', onFormPopupInvalid, true);
-    formPopup.removeEventListener('submit', onPopupButtonSubmitSubmit);
-    popupButtonSubmit.removeEventListener('click', onPopupButtonSubmitClick);
+    formPopup.removeEventListener('invalid', onRequaredFildsFormInvalid, true);
+    formPopup.removeEventListener('submit', onNamePopupEmailPopupSubmit);
+    popupButtonSubmit.removeEventListener('click', onRequaredFildsFormClick);
   }
 });
