@@ -12,7 +12,7 @@ var namePopup = formPopup.querySelector('#modalForm-name');
 var emailPopup = formPopup.querySelector('#email');
 var comentPopup = formPopup.querySelector('#text-modal');
 var popupButtonSubmit = formPopup.querySelector('.modal-form__button');
-var testElement = document.querySelector('main');
+var page = document.querySelector('.page');
 
 var onNamePopupEmailPopupSubmit = function(evt) {
   if (toCheckIsStorageSupport()) {
@@ -91,12 +91,14 @@ var showPopapAnimation = function(className) {
 var openPopap = function(evt) {
   modalPopup.classList.remove('visually-hidden');
   showPopapAnimation('animation--show');
+  page.classList.add('page--overlay')
   document.addEventListener('keydown', onModalPopupKeydown);
 }
 
 var closePopap = function(evt) {
   evt.preventDefault();
   modalPopup.classList.add('visually-hidden');
+  page.classList.remove('page--overlay')
   document.removeEventListener('keydown', onModalPopupKeydown);
 }
 
