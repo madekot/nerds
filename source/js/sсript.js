@@ -8,7 +8,6 @@ var modalPopup = document.querySelector('.modal');
 var popupButtonClose = modalPopup.querySelector('.modal__button-close');
 
 var formPopup = modalPopup.querySelector('.modal-form');
-var requaredFildsForm = formPopup.querySelectorAll('.modal-form__input:required');
 var namePopup = formPopup.querySelector('#modalForm-name');
 var emailPopup = formPopup.querySelector('#email');
 var comentPopup = formPopup.querySelector('#text-modal');
@@ -43,7 +42,6 @@ var readLocalStorage = function() {
 }
 
 var onNamePopupEmailPopupSubmit = function(evt) {
-  evt.preventDefault();
   if (toCheckIsStorageSupport()) {
     localStorage.setItem('name', namePopup.value);
     localStorage.setItem('email', emailPopup.value);
@@ -63,12 +61,21 @@ var onRequaredFildsFormInvalid = function(evt) {
 }
 
 var onRequaredFildsFormClick = function() {
+  var requaredFildsForm = formPopup.querySelectorAll('.modal-form__input:required');
   for (var i = 0; i < requaredFildsForm.length; i++) {
     var requaredFild = requaredFildsForm[i];
-    if (requaredFild.checkValidity() === true) {
+    if (requaredFild.validity.valid === true) {
       if (requaredFild.classList.contains('modal-form__input--invalid')) {
         requaredFild.classList.remove('modal-form__input--invalid');
       }
+    }
+  }
+};
+
+var onRequaredFildsFormKeyup = function(evt) {
+  if (evt.target.validity.valid) {
+    if (evt.target.classList.contains('modal-form__input--invalid')) {
+       evt.target.classList.remove('modal-form__input--invalid');
     }
   }
 };
@@ -96,21 +103,24 @@ var closePopap = function(evt) {
 
 popupButtonOpen.addEventListener('click', function(evt) {
   evt.preventDefault();
-  if (modalPopup.classList.contains('visually-hidden')) {
-    openPopap(evt);
+  openPopap(evt);
+  console.log(modalPopup.classList.contains('visually-hidden'))
+  if (modalPopup.classList.contains('visually-hidden') === false) {
     readLocalStorage();
     formPopup.addEventListener('invalid', onRequaredFildsFormInvalid, true);
     formPopup.addEventListener('submit', onNamePopupEmailPopupSubmit);
+    formPopup.addEventListener('keyup', onRequaredFildsFormKeyup);
     popupButtonSubmit.addEventListener('click', onRequaredFildsFormClick);
   }
 });
 
 popupButtonClose.addEventListener('click', function(evt) {
   evt.preventDefault();
-  if (!(modalPopup.classList.contains('visually-hidden'))) {
-    closePopap(evt);
+  closePopap(evt);
+  if (modalPopup.classList.contains('visually-hidden')) {
     formPopup.removeEventListener('invalid', onRequaredFildsFormInvalid, true);
     formPopup.removeEventListener('submit', onNamePopupEmailPopupSubmit);
+    formPopup.removeEventListener('keyup', onRequaredFildsFormKeyup);
     popupButtonSubmit.removeEventListener('click', onRequaredFildsFormClick);
   }
 });
