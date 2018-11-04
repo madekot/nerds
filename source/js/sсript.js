@@ -12,7 +12,7 @@ var namePopup = formPopup.querySelector('#modalForm-name');
 var emailPopup = formPopup.querySelector('#email');
 var comentPopup = formPopup.querySelector('#text-modal');
 var popupButtonSubmit = formPopup.querySelector('.modal-form__button');
-var page = document.querySelector('.page');
+var overlay = document.querySelector('.overlay');
 
 var onNamePopupEmailPopupSubmit = function(evt) {
   if (toCheckIsStorageSupport()) {
@@ -53,6 +53,11 @@ var onRequaredFildsFormKeyup = function(evt) {
   }
 };
 
+
+var OnOverlayClick = function(evt) {
+  closePopap(evt);
+}
+
 var toCheckIsStorageSupport = function () {
   var isStorageSupport = true;
   var storage = '';
@@ -91,15 +96,17 @@ var showPopapAnimation = function(className) {
 var openPopap = function(evt) {
   modalPopup.classList.remove('visually-hidden');
   showPopapAnimation('animation--show');
-  page.classList.add('page--overlay')
+  overlay.classList.add('overlay--show')
   document.addEventListener('keydown', onModalPopupKeydown);
+  overlay.addEventListener('click', OnOverlayClick);
 }
 
 var closePopap = function(evt) {
   evt.preventDefault();
   modalPopup.classList.add('visually-hidden');
-  page.classList.remove('page--overlay')
+  overlay.classList.remove('overlay--show')
   document.removeEventListener('keydown', onModalPopupKeydown);
+  overlay.removeEventListener('click', OnOverlayClick);
 }
 
 var toCheckIsStorageSupport = function () {

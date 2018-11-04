@@ -10,18 +10,6 @@
   color: $color-black;
 
   background-color: $color-white;
-
-  &--overlay::after {
-    content: "";
-    position: absolute;
-    z-index: 30;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: black;
-    opacity: 0.4;
-  }
 }
 
 .page__header {
