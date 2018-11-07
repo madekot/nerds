@@ -12,7 +12,6 @@ var namePopup = formPopup.querySelector('#modalForm-name');
 var emailPopup = formPopup.querySelector('#email');
 var comentPopup = formPopup.querySelector('#text-modal');
 var popupButtonSubmit = formPopup.querySelector('.modal-form__button');
-var overlay = document.querySelector('.overlay');
 
 var onNamePopupEmailPopupSubmit = function(evt) {
   if (toCheckIsStorageSupport()) {
@@ -93,20 +92,27 @@ var showPopapAnimation = function(className) {
   setTimeout(deleteClassAnimationShow, TIME_DELETE_CLASS);
 }
 
+var page = document.querySelector('.page');
+var overlayElement = document.createElement('div');
+
+var appendOverlayElement = function() {
+  overlayElement.classList.add('overlay','overlay--show');
+  overlayElement.addEventListener('click', OnOverlayClick);
+  page.appendChild(overlayElement);
+}
+
 var openPopap = function(evt) {
   modalPopup.classList.remove('visually-hidden');
   showPopapAnimation('animation--show');
-  overlay.classList.add('overlay--show')
   document.addEventListener('keydown', onModalPopupKeydown);
-  overlay.addEventListener('click', OnOverlayClick);
+  appendOverlayElement();
 }
 
 var closePopap = function(evt) {
-  evt.preventDefault();
   modalPopup.classList.add('visually-hidden');
-  overlay.classList.remove('overlay--show')
+  overlayElement.classList.remove('overlay--show');
+  overlayElement.removeEventListener('click', OnOverlayClick);
   document.removeEventListener('keydown', onModalPopupKeydown);
-  overlay.removeEventListener('click', OnOverlayClick);
 }
 
 var toCheckIsStorageSupport = function () {
