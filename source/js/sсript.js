@@ -95,17 +95,18 @@ var showPopapAnimation = function(className) {
 var page = document.querySelector('.page');
 var overlayElement = document.createElement('div');
 
-var appendOverlayElement = function() {
-  overlayElement.classList.add('overlay','overlay--show');
-  overlayElement.addEventListener('click', OnOverlayClick);
+(function () {
+  overlayElement.classList.add('overlay');
   page.appendChild(overlayElement);
-}
+})();
 
 var openPopap = function(evt) {
   modalPopup.classList.remove('visually-hidden');
   showPopapAnimation('animation--show');
   document.addEventListener('keydown', onModalPopupKeydown);
-  appendOverlayElement();
+
+  overlayElement.classList.add('overlay--show');
+  overlayElement.addEventListener('click', OnOverlayClick);
 }
 
 var closePopap = function(evt) {
