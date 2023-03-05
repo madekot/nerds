@@ -11,7 +11,7 @@ Nerds это небольшая веб студия
 * JavaScript, HTML, CSS
 
 ## Инструкция по установке приложения:
-  git clone https://github.com/EpiphES/volker-admin-frontend
+  git clone git@github.com:madekot/nerds.git
   npm i
   npm start
 
