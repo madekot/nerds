@@ -11,7 +11,7 @@ Nerds это небольшая веб студия
 * JavaScript, HTML, CSS
 
 ## Инструкция по установке приложения:
-  git clone https://git@github.com:madekot/nerds.git
-  npm i
-  npm start
+  * git clone https://git@github.com:madekot/nerds.git
+  * npm i
+  * npm start
 
